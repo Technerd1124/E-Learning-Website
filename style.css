@@ -36,7 +36,7 @@ html {
 }
 
 #main_nav {
-  border: 3px solid rgba(255, 105, 180, 0.16);
+  border: 3px solid rgba(255, 105, 180, 0);
   display: flex !important;
   flex-direction: row;
   justify-content: space-evenly;
@@ -52,7 +52,7 @@ a {
 
 #main_nav > div {
   border-bottom: 2px solid #ffffffe3;
-  padding:3vh;
+  padding: 1.3vh;
   width: -webkit-fill-available;
   background: #3f060660;
   border-radius: 2.3vh;
@@ -111,7 +111,7 @@ a {
 .text-overlay {
   /* position: absolute;s */
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 20%;
   transform: translate(-50%, -50%);
   color: white;
@@ -131,6 +131,46 @@ a {
   top: 1rem;
   margin: auto;
   padding: 0px;
+}
+/* 
+#contact {
+  padding: 20px;
+} */
+
+.contact_container {
+  display: flex;
+  align-items: center;
+}
+
+.img-fluid {
+  max-width: 50%;
+  height: auto;
+}
+
+.contact_box {
+  max-width: 50%;
+  padding: 24px;
+  position: absolute;
+  top: 7rem;
+  left: 50%;
+  right: 10%;
+  border: 2px solid gray;
+}
+
+.formSection {
+  margin-bottom: 15px;
+}
+
+.formSection label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.formSection input,
+.formSection select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
 }
 
 /* ------------Footers ------------  */
