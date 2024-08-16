@@ -36,13 +36,14 @@ html {
 }
 
 #main_nav {
-  border: 3px solid rgba(255, 105, 180, 0);
-  display: flex !important;
-  flex-direction: row;
-  justify-content: space-evenly;
-  padding: 0.3rem;
+  display: flex;
+  padding-left: 11%;
   margin: auto;
-  gap: 2vh;
+  gap: 18px;
+    row-gap: 18px;
+  flex-direction: row;
+  row-gap: 6px;
+  padding-right: 11%;
 }
 
 #main_nav,
@@ -51,13 +52,15 @@ a {
 }
 
 #main_nav > div {
-  border-bottom: 2px solid #ffffffe3;
-  padding: 1.3vh;
-  width: -webkit-fill-available;
-  background: #3f060660;
-  border-radius: 2.3vh;
-  box-shadow: -1px 5px 20px 4px rgb(166 188 255 / 41%);
+  border-left: 2px solid #a68c8c66;
+  padding: 2vh;
+  width: 100%;
+  border-radius: 0.5rem;
+  /* box-shadow: -1px 5px 20px 4px rgb(166 188 255 / 41%); */
   text-align: center;
+  top: 0pxs;
+  position: relative;
+  border-right: 3px solid #a68c8c66;
 }
 
 .signin {
@@ -151,7 +154,7 @@ a {
   max-width: 50%;
   padding: 24px;
   position: absolute;
-  top: 7rem;
+  top: 14rem;
   left: 50%;
   right: 10%;
   border: 2px solid gray;
@@ -187,6 +190,55 @@ a {
   );
 }
 
+.navbar {
+  display: flex  !im;
+  justify-content: space-evenly !im;
+  align-items: center !im;
+  background-color: #121212 !im;
+  padding: 15px 30px !im;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+}
+
+.nav-links li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s;
+  margin-top: 5px;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.get-started-btn {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.get-started-btn:hover {
+  background-color: #fff;
+  color: #121212;
+}
 /* ======================= Making  Resposive  ================  */
 
 /* For screens smaller than 1024px (e.g., tablets) */

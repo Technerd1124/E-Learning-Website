@@ -1,219 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Tech And Teach </title>
-    <link rel="stylesheet" href="./style.css">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap"
-      rel="stylesheet">
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  </head>
-  <body>
-    <!-- ------- NavBar Start -----  -->
-    <!-- ------- WEBSITE TITLE AND SEARCG BAR SECTION -----  -->
-    <nav class="navbar bg-#ffff">
-      <div class="container-fluid" id="first_nav">
-        <a class="navbar-brand">Tech || Teach</a>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search"
-            aria-label="Search">
-          <button class="btn btn-outline" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
 
-    <hr style="color: #fff;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Tech And Teach </title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
 
-    <!-- MAIN NAVIGATOR HERE  -->
-    <nav class="navbar navbar-expand-lg --bs-dark-bg-subtle">
-      <div class="container-fluid" id="main_nav">
-        <div><a href="#"> Home </a></div>
-        <div> <a href="#courseSection"> Explore Courses</a> </div>
-        <div> <a href="#contact"> Contact Us </a></div>
-        <div> <a href="feedback.html"> Feedback </a></div>
-      </div>
-    </nav>
-    <!---------navbar   END --------- -->
-    <div class="bg_main">
-      <img src="./Demo UI/bg_main.png" class="img-fluid"
-        alt="Landing page Image">
-      <div class="text-overlay">
-        <h1>Learn <span id="autotype"></span></h1>
+<body>
+  <!-- ------- NavBar Start -----  -->
+
+  <nav class="navbar">
+    <ul class="nav-links">
+        <li><a href="#">Enterprise-ready</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">FAQs</a></li>
+    </ul>
+    <button class="get-started-btn">Get started</button>
+</nav>
+
+  <!-- ------- WEBSITE TITLE AND SEARCG BAR SECTION -----  -->
+  <nav class="navbar bg-#ffff">
+    <div class="container-fluid" id="first_nav">
+      <a class="navbar-brand">Tech || Teach</a>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <hr style="color: #fff;">
+
+ 
+  <!---------navbar   END --------- -->
+  <div class="bg_main">
+    <img src="./Demo UI/bg_main.png" class="img-fluid" alt="Landing page Image">
+    <div class="text-overlay">
+      <h1>Learn <span id="autotype"></span></h1>
+    </div>
+  </div>
+
+  <!-- Courses Exploring Section  -->
+  <section id="courseSection" class="course">
+    <div class="card" style="width: 100%;">
+      <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">SQL</text></svg> -->
+      <img src="./Demo UI/SQl.png" alt>
+      <div class="card-body d-grid">
+        <div class="d-flex flex-column justify-content-center ">
+          <h5 class="card-title" style="text-align: center;">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card
+            title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary center" style="color:white !important;">Go somewhere</a>
+        </div>
       </div>
     </div>
+    <div class="card" style="width: 100%;">
+      <img src="./Demo UI/C.png" alt>
+      <div class="card-body d-grid">
+        <div class="d-flex flex-column justify-content-center ">
+          <h5 class="card-title " style="text-align: center;">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card
+            title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary center" style="color:white !important;">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="width: 100%;">
+      <img src="./Demo UI/css.png" alt>
+      <div class="card-body d-grid">
+        <div class="d-flex flex-column justify-content-center ">
+          <h5 class="card-title " style="text-align: center;">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card
+            title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary center" style="color:white !important;">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="width: 100%;">
+      <img src="./Demo UI/html.png" alt>
+      <div class="card-body d-grid">
+        <div class="d-flex flex-column justify-content-center ">
+          <h5 class="card-title " style="text-align: center;">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card
+            title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary center" style="color:white !important;">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  
+  </section>
 
-    <!-- Courses Exploring Section  -->
-    <section id="courseSection" class="course">
-      <div class="card" style="width: 100%;">
-        <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">SQL</text></svg> -->
-        <img src="./Demo UI/SQl.png" alt>
-        <div class="card-body d-grid">
-          <div class="d-flex flex-column justify-content-center ">
-            <h5 class="card-title" style="text-align: center;">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card
-              title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary center"
-              style="color:white !important;">Go somewhere</a>
-          </div>
+  <section id="contact">
+    <img src="./Demo UI/contact_2.png" class="imgs-fluid" alt="...">
+    <div class="contact_box">
+      <form action="#">
+        <div class="formSection">
+          <label for> Name : </label>
+          <input type="text" placeholder="Enter Name ">
         </div>
-      </div>
-      <div class="card" style="width: 100%;">
-        <img src="./Demo UI/C.png" alt>
-        <div class="card-body d-grid">
-          <div class="d-flex flex-column justify-content-center ">
-            <h5 class="card-title " style="text-align: center;">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card
-              title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary center"
-              style="color:white !important;">Go somewhere</a>
-          </div>
+        <div class="formSection">
+          <label for> Email : </label>
+          <input type="email" placeholder="Enter Email ">
         </div>
-      </div>
-      <div class="card" style="width: 100%;">
-        <img src="./Demo UI/css.png" alt>
-        <div class="card-body d-grid">
-          <div class="d-flex flex-column justify-content-center ">
-            <h5 class="card-title " style="text-align: center;">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card
-              title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary center"
-              style="color:white !important;">Go somewhere</a>
-          </div>
+        <div class="formSection">
+          <label for> Phone </label>
+          <input type="tel" placeholder="Enter Phone Number  ">
         </div>
-      </div>
-      <div class="card" style="width: 100%;">
-        <img src="./Demo UI/html.png" alt>
-        <div class="card-body d-grid">
-          <div class="d-flex flex-column justify-content-center ">
-            <h5 class="card-title " style="text-align: center;">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card
-              title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary center"
-              style="color:white !important;">Go somewhere</a>
-          </div>
+        <div class="formSection">
+          <label for="category">Choose The Course You want to Enroll :</label>
+          <select id="category" name="category">
+            <option value="tech">HTML</option>
+            <option value="food">CSS </option>
+            <option value="fashion">Java Script</option>
+            <option value="sports"> SQL </option>
+          </select>
         </div>
-      </div>
-      <div class="card" style="width: 100%;">
-        <img src="./Demo UI/2.jpg" alt>
-        <div class="card-body d-grid">
-          <div class="d-flex flex-column justify-content-center ">
-            <h5 class="card-title " style="text-align: center;">Java Programming
-            </h5>
-            <br>
-            <p class="card-text">Some quick example text to build on the card
-              title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary center"
-              style="color:white !important;">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      <div class="card" style="width: 100%;">
-        <img src="./Demo UI/2.jpg" alt>
-        <div class="card-body d-grid">
-          <div class="d-flex flex-column justify-content-center ">
-            <h5 class="card-title " style="text-align: center;">Java Programming
-            </h5>
-            <br>
-            <p class="card-text">Some quick example text to build on the card
-              title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary center"
-              style="color:white !important;">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      <div class="card" style="width: 100%;">
-        <img src="./Demo UI/2.jpg" alt>
-        <div class="card-body d-grid">
-          <div class="d-flex flex-column justify-content-center ">
-            <h5 class="card-title " style="text-align: center;">Java Programming
-            </h5>
-            <br>
-            <p class="card-text">Some quick example text to build on the card
-              title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary center"
-              style="color:white !important;">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-
-    </section>
-
-    <section id="contact">
-      <img src="./Demo UI/contact_2.png" class="img-fluid" alt="...">
-      <div class="contact_box">
-        <form action="#">
-          <div class="formSection">
-            <label for> Name : </label>
-            <input type="text" placeholder="Enter Name ">
-          </div>
-          <div class="formSection">
-            <label for> Email : </label>
-            <input type="email" placeholder="Enter Email ">
-          </div>
-          <div class="formSection">
-            <label for> Phone </label>
-            <input type="tel" placeholder="Enter Phone Number  ">
-          </div>
-          <div class="formSection">
-            <label for="category">Choose The Course You want to Enroll :</label>
-            <select id="category" name="category">
-              <option value="tech">HTML</option>
-              <option value="food">CSS </option>
-              <option value="fashion">Java Script</option>
-              <option value="sports"> SQL </option>
-            </select>
-          </div>
-          <div class="formSection">
+        <div class="formSection">
           <a href="feedback.html">
-            <input type="submit" value="Submit" >
-          </a>   
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <!-- // Displays Footer  -->
-    <footer class="footer_main">
-
-      <footer
-        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <p class="col-md-4 mb-0 text-muted">&copy; 2021 Company, Inc</p>
-
-        <a href="/"
-          class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-          <svg class="bi me-2" width="40" height="32"><use
-              xlink:href="#bootstrap" /></svg>
-        </a>
-
-        <ul class="nav col-md-4 justify-content-end">
-          <li class="nav-item"><a href="#"
-              class="nav-link px-2 text-muted">Home</a></li>
-          <li class="nav-item"><a href="#"
-              class="nav-link px-2 text-muted">Features</a></li>
-          <li class="nav-item"><a href="#"
-              class="nav-link px-2 text-muted">Pricing</a></li>
-          <li class="nav-item"><a href="#"
-              class="nav-link px-2 text-muted">FAQs</a></li>
-          <li class="nav-item"><a href="#"
-              class="nav-link px-2 text-muted">About</a></li>
-        </ul>
-      </footer>
-
+            <input type="submit" value="Submit">
+          </a>
+        </div>
+      </form>
+    </div>
+  </section>
+  <!-- // Displays Footer  -->
+  <footer class="footer_main">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <p class="col-md-4 mb-0 text-muted">&copy; 2021 Company, Inc</p>
+      <a href="/"
+        class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32">
+          <use xlink:href="#bootstrap" />
+        </svg>
+      </a>
+      <ul class="nav col-md-4 justify-content-end">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+      </ul>
     </footer>
+  </footer>
+  <script src="./script.js"></script>
+</body>
 
-    <script src="./script.js"></script>
-  </body>
 </html>
