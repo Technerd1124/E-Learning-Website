@@ -1,0 +1,41 @@
+12:29:42 PM: build-image version: ecdc8b770f4a0193fd3f258c1bc6029e681813a4 (focal)
+12:29:42 PM: buildbot version: 31384b9071289c6a22c9a280fe11b85737b6fd56
+12:29:42 PM: Fetching cached dependencies
+12:29:42 PM: Starting to download cache of 6.4MB
+12:29:42 PM: Finished downloading cache in 90ms
+12:29:42 PM: Starting to extract cache
+12:29:42 PM: Finished extracting cache in 14ms
+12:29:42 PM: Finished fetching cache in 146ms
+12:29:42 PM: Starting to prepare the repo for build
+12:29:42 PM: Preparing Git Reference refs/heads/main
+12:29:44 PM: Starting to install dependencies
+12:29:44 PM: Python version set to 3.8
+12:29:44 PM: Attempting Ruby version 2.7.2, read from environment
+12:29:45 PM: Using Ruby version 2.7.2
+12:29:45 PM: Started restoring cached go cache
+12:29:45 PM: Finished restoring cached go cache
+12:29:46 PM: go version go1.19.13 linux/amd64
+12:29:47 PM: Using PHP version 8.0
+12:29:49 PM: v18.20.4 is already installed.
+12:29:49 PM: Now using node v18.20.4 (npm v10.7.0)
+12:29:49 PM: Enabling Node.js Corepack
+12:29:49 PM: Started restoring cached build plugins
+12:29:49 PM: Finished restoring cached build plugins
+12:29:49 PM: Successfully installed dependencies
+12:29:49 PM: No build steps found, continuing to publishing
+12:29:49 PM: Starting to deploy site from '/'
+12:29:49 PM: Calculating files to upload
+12:29:49 PM: 1 new file(s) to upload
+12:29:49 PM: 0 new function(s) to upload
+12:29:49 PM: Section completed: deploying
+12:29:49 PM: Section completed: building
+12:29:50 PM: Starting post processing
+12:29:50 PM: Skipping form detection
+12:29:50 PM: Post processing - header rules
+12:29:50 PM: Post processing - redirect rules
+12:29:50 PM: Post processing done
+12:29:50 PM: Section completed: postprocessing
+12:29:50 PM: Uploading Cache of size 6.4MB
+12:29:50 PM: Section completed: cleanup
+12:29:50 PM: Finished processing build request in 8.391s
+
