@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Tutorial</title>
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            width: 250px;
+            background: #f4f4f4;
+            padding: 10px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar h2 {
+            margin-top: 0;
+        }
+        .nav-list {
+            list-style: none;
+            padding: 0;
+        }
+        .nav-list li {
+            margin: 10px 0;
+        }
+        .nav-list a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .nav-list a:hover {
+            background: #ddd;
+        }
+        .content-container {
+            flex: 1;
+            padding: 20px;
+        }
+        .content {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>SQL Tutorial</h2>
+        <ul class="nav-list">
+            <li><a href="#home" data-target="home">SQL Home</a></li>
+            <li><a href="#intro" data-target="intro">SQL Intro</a></li>
+            <li><a href="#syntax" data-target="syntax">SQL Syntax</a></li>
+            <li><a href="#select" data-target="select">SQL Select</a></li>
+            <li><a href="#distinct" data-target="distinct">SQL Select Distinct</a></li>
+            <li><a href="#where" data-target="where">SQL Where</a></li>
+            <li><a href="#orderby" data-target="orderby">SQL Order By</a></li>
+            <li><a href="#and" data-target="and">SQL And</a></li>
+            <li><a href="#or" data-target="or">SQL Or</a></li>
+            <li><a href="#insert" data-target="insert">SQL Insert Into</a></li>
+            <li><a href="#null" data-target="null">SQL Null Values</a></li>
+            <!-- Add more links as needed -->
+        </ul>
+    </div>
+
+    <div class="content-container">
+        <div id="home" class="content">Welcome to the SQL Home page!</div>
+        <div id="intro" class="content">Introduction to SQL.</div>
+        <div id="syntax" class="content">SQL Syntax details.</div>
+        <div id="select" class="content">Details about SQL SELECT statement.</div>
+        <div id="distinct" class="content">Using SQL DISTINCT.</div>
+        <div id="where" class="content">SQL WHERE clause explanation.</div>
+        <div id="orderby" class="content">Ordering results with SQL ORDER BY.</div>
+        <div id="and" class="content">Using AND in SQL queries.</div>
+        <div id="or" class="content">Using OR in SQL queries.</div>
+        <div id="insert" class="content">Inserting data with SQL INSERT INTO.</div>
+        <div id="null" class="content">Handling NULL values in SQL.</div>
+        <!-- Add more content sections as needed -->
+    </div>
+
+    <script>
+        document.querySelectorAll('.nav-list a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevent the default anchor behavior
+                
+                const targetId = link.getAttribute('data-target');
+                
+                // Hide all content sections
+                document.querySelectorAll('.content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // Show the targeted content section
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
