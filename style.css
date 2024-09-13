@@ -9,65 +9,67 @@ html {
   background: linear-gradient(135deg, #0002a8, #81007c, #2f205f, #240783);
 }
 
-/* ------ Navbars ----  */
-#first_nav {
-  display: flex;
-  align-content: space-between;
-  flex-direction: row;
-  justify-content: flex-end;
+header{
+
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  /* border: 5px solid hotpink; */
-  flex-wrap: nowrap;
+  background-color: #333;
+  color: #fff;
+  z-index: 999;
+
 }
-#first_nav > a {
-  /* border: 3px solid yellow; */
-  right: 0;
-  position: relative;
-  width: 99%;
-  text-align: center;
-  letter-spacing: 7px;
-  font-weight: 700;
-  font-size: 2rem;
-}
-#first_nav > form {
-  /* border: 3px solid yellow; */
-  width: 38%;
+.navbar {
+/* position:fixed !important; */
+/* z-index: 999 !important; */
+display: flex !important ;
+justify-content: space-evenly !important;
+align-items: center !important ;
+background-color: #121212  !important;
+padding: 15px 30px!important ;
 }
 
-#main_nav {
-  display: flex;
-  padding-left: 11%;
-  margin: auto;
-  gap: 18px;
-    row-gap: 18px;
-  flex-direction: row;
-  row-gap: 6px;
-  padding-right: 11%;
+.nav-links {
+list-style: none;
+display: flex;
+gap: 50px;
+
 }
 
-#main_nav,
-a {
-  text-decoration: none !important;
+.nav-links li a {
+font-size:2.8vh;
+position: relative;
+font-weight: 500;
 }
 
-#main_nav > div {
-  border-left: 2px solid #a68c8c66;
-  padding: 2vh;
-  width: 100%;
-  border-radius: 0.5rem;
-  /* box-shadow: -1px 5px 20px 4px rgb(166 188 255 / 41%); */
-  text-align: center;
-  top: 0pxs;
-  position: relative;
-  border-right: 3px solid #a68c8c66;
+.nav-links li a::after {
+content: "";
+display: block;
+width: 0;
+height: 2px;
+background: #fff;
+transition: width 0.3s;
+margin-top: 5px;
 }
 
-.signin {
-  border: 6px solid rgba(222, 15, 15, 0.973);
-  padding: 2vh;
-  border-radius: 3vh;
-  box-shadow: 0 0 15px rgba(0, 123, 255, 0.8); /* The glow effect */
-  transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
+.nav-links li a:hover::after {
+width: 100%;
+}
+
+.get-started-btn {
+background-color: transparent;
+color: #fff;
+border: 1px solid #fff;
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.get-started-btn:hover {
+background-color: #fff;
+color: #121212;
 }
 
 /*-------------- Course Section --------------  */
@@ -143,10 +145,6 @@ a {
   margin: auto;
   padding: 0px;
 }
-/* 
-#contact {
-  padding: 20px;
-} */
 
 .contact_container {
   display: flex;
@@ -198,68 +196,7 @@ a {
   );
 }
 
-header{
 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    z-index: 999;
-
-}
-.navbar {
-  /* position:fixed !important; */
-  /* z-index: 999 !important; */
-  display: flex !important ;
-  justify-content: space-evenly !important;
-  align-items: center !important ;
-  background-color: #121212  !important;
-  padding: 15px 30px!important ;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 50px;
-  
-}
-
-.nav-links li a {
-  font-size:2.8vh;
-position: relative;
-font-weight: 500;
-}
-
-.nav-links li a::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #fff;
-  transition: width 0.3s;
-  margin-top: 5px;
-}
-
-.nav-links li a:hover::after {
-  width: 100%;
-}
-
-.get-started-btn {
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.get-started-btn:hover {
-  background-color: #fff;
-  color: #121212;
-}
 /* ======================= Making  Resposive  ================  */
 
 /* For screens smaller than 1024px (e.g., tablets) */
