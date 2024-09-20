@@ -5,20 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SQL Tutorial</title>
     <style>
-        body {
+            body {
             display: flex;
             margin: 0;
             height: 100vh;
             font-family: Arial, sans-serif;
+            
+            background-color: #DBD8E3;
         }
         .sidebar {
             width: 250px;
             background: #f4f4f4;
+            background-color: #2A2438;
             padding: 10px;
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         }
         .sidebar h2 {
             margin-top: 0;
+            color: #fff;
+        }
+
+        .sidebar li {
+            background-color: #5C5470;
+            border-radius: 6vh;
+           
         }
         .nav-list {
             list-style: none;
@@ -29,13 +39,15 @@
         }
         .nav-list a {
             text-decoration: none;
-            color: #333;
+            color: #fffefe;
             display: block;
             padding: 10px;
             border-radius: 4px;
         }
         .nav-list a:hover {
-            background: #ddd;
+            background: #8e85b87c;
+            border-radius: 6vh;
+
         }
         .content-container {
             flex: 1;
@@ -47,6 +59,8 @@
         .active {
             display: block;
         }
+
+        
     </style>
 </head>
 <body>

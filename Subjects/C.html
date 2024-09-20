@@ -6,20 +6,29 @@
     <title> C++ Language Tutorial</title>
     <style>
         body {
-            /* display: ; */
+            display: flex;
             margin: 0;
             height: 100vh;
             font-family: Arial, sans-serif;
+            
+            background-color: #DBD8E3;
         }
         .sidebar {
-            position: relative;
             width: 250px;
             background: #f4f4f4;
+            background-color: #2A2438;
             padding: 10px;
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         }
         .sidebar h2 {
             margin-top: 0;
+            color: #fff;
+        }
+
+        .sidebar li {
+            background-color: #5C5470;
+            border-radius: 6vh;
+           
         }
         .nav-list {
             list-style: none;
@@ -30,13 +39,15 @@
         }
         .nav-list a {
             text-decoration: none;
-            color: #333;
+            color: #fffefe;
             display: block;
             padding: 10px;
             border-radius: 4px;
         }
         .nav-list a:hover {
-            background: #ddd;
+            background: #8e85b87c;
+            border-radius: 6vh;
+
         }
         .content-container {
             flex: 1;
@@ -49,93 +60,20 @@
             display: block;
         }
 
-        nav {
-  padding: 1rem;
-  background-color: #333; /* Dark background for better contrast */
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-/* Style for the search input */
-.form-control {
-  border: 1px solid #555;
-  border-radius: 4px;
-  padding: 0.5rem;
-  outline: none;
-  background-color: #222;
-  color: #fff;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.form-control:focus {
-  box-shadow: 0 0 8px #0f0; /* Green glow on focus */
-}
-
-/* Style for the search button */
-.btn-outline {
-  border: 2px solid #0f0;
-  color: #0f0;
-  background-color: transparent;
-  border-radius: 4px;
-  padding: 0.5rem 1rem;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.btn-outline:hover {
-  box-shadow: 0 0 8px #0f0; /* Green glow on hover */
-}
-
-/* Style for the Get Started button */
-.get-started-btn {
-  background-color: #0f0; /* Bright green background */
-  color: #000; /* Black text */
-  border: none;
-  border-radius: 4px;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.get-started-btn:hover {
-  box-shadow: 0 0 12px #0f0; /* Brighter green glow on hover */
-}
-
-
+        
     </style>
 </head>
 <body>
 
 
-    <nav>
-        <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline" type="submit">Search</button>
-      </form>
-      <button class="get-started-btn/">Get started</button>
-    </nav>
+   
     <div class="sidebar">
-        <h2> C++  Tutorial</h2>
+        <h2 style="background-color: #2A2438; color: #f4f4f4;"> C++  Tutorial</h2>
         <ul class="nav-list">
             <li><a href="#home" data-target="home"> C++ home </a></li>
             <li><a href="#intro" data-target="intro"> C++ intro</a></li>
             <li><a href="#syntax" data-target="syntax"> C++  Syntax  </a></li>
-            <li><a href="#select" data-target="select"> C++ output </a></li>
-            <li><a href="#distinct" data-target="distinct"> C++ Comment </a></li>
-            <li><a href="#where" data-target="where"> C++ variable </a></li>
-            <li><a href="#orderby" data-target="orderby">  C  Data Types</a></li>
-            <li><a href="#and" data-target="and"> C++  Constants </a></li>
-            <li><a href="#or" data-target="or"> C++ Operators </a></li>
-            <li><a href="#insert" data-target="insert"> C++ Booleans </a></li>
-            <li><a href="#null" data-target="null"> C++ Conditional Statements  </a></li>
-            <li><a href="#null" data-target="null"> C++ Loops  </a></li>
-            <li><a href="#null" data-target="null"> C++ Arrays  </a></li>
-            <li><a href="#null" data-target="null"> C++  Strings </a></li>
-            <li><a href="#null" data-target="null"> C++ User Input  </a></li>
-            <li><a href="#null" data-target="null"> C++ Memory Address</a></li>
-            <li><a href="#null" data-target="null"> C++ Structures  </a></li>
-            <!-- Add more links as needed -->
+           
         </ul>
     
         <h2> C++ Functions </h2>
@@ -146,25 +84,21 @@
             <li><a href="#null" data-target="null"> C++ User Input  </a></li>
             <li><a href="#null" data-target="null"> C++ Memory Address</a></li>
             <li><a href="#null" data-target="null"> C++ Structures  </a></li>
-            <!-- Add more links as needed -->
         </ul>
     </div>
 
 
      <!-- ==========   Content To Change On Nav Bar Clicks =========  -->
     <div class="content-container">
-        <div id="home" class="content">Welcome to the SQL Home page!</div>
+        <div id="home" class="content">
+            <div class="box1">
+
+            </div>
+            Welcome to the SQL Home page!
+        </div>
         <div id="intro" class="content">Introduction to SQL.</div>
         <div id="syntax" class="content">SQL Syntax details.</div>
-        <div id="select" class="content">Details about SQL SELECT statement.</div>
-        <div id="distinct" class="content">Using SQL DISTINCT.</div>
-        <div id="where" class="content">SQL WHERE clause explanation.</div>
-        <div id="orderby" class="content">Ordering results with SQL ORDER BY.</div>
-        <div id="and" class="content">Using AND in SQL queries.</div>
-        <div id="or" class="content">Using OR in SQL queries.</div>
-        <div id="insert" class="content">Inserting data with SQL INSERT INTO.</div>
-        <div id="null" class="content">Handling NULL values in SQL.</div>
-        <!-- Add more content sections as needed -->
+       
     </div>
 
     <script>
