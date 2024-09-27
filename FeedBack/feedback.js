@@ -7,14 +7,12 @@ const emailInput = document.getElementById('email');
 function saveData() {
     const username = usernameInput.value;
     const email = emailInput.value;
-
     // Save data to Local Storage
     localStorage.setItem('username', username);
     localStorage.setItem('email', email);
     // Update the displayed data
     displayData();
 }
-
 // Function to display data from Local Storage
 function displayData() {
     const storedName = localStorage.getItem('username');
@@ -33,8 +31,6 @@ window.onload = displayData;
 
 
 // ====== new 
-
-
 
 function setEmail() {
 
