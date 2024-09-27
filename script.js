@@ -7,3 +7,6 @@ var typed = new Typed('#autotype', {
  // setInterval( Typed(), 200);
 
  
+ function OpenLogin(){ 
+  window.open('https://chatgpt.com/');
+ }

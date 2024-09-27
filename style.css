@@ -72,6 +72,15 @@ background-color: #fff;
 color: #121212;
 }
 
+.loginbtn{ 
+  background: #2A2438;
+  color: rgba(120, 228, 201, 0.74);
+  border: none;
+}
+
+.loginbtn:hover {
+
+}
 /*-------------- Course Section --------------  */
 .course {
   border-bottom: 13px solid rgb(234 229 229 / 27%);

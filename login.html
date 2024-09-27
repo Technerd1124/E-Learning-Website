@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login  to Tech ANd Teach </title>
+    <style>
+      /* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1459a725;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Form styling */
+form {
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+/* Formbox styling */
+.formbox {
+    margin-bottom: 15px;
+}
+
+/* Label styling */
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+    border: 1px solid #4caf50;
+    outline: none;
+}
+
+/* Button styling */
+button {
+    background-color: #4c2eb6;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #1a1283;
+}
+
+    </style>
+</head>
+<body>
+     <form name ="loginform">
+      <h3 style="text-align: center;"> Login Here </h3>
+         <div class="formbox">
+            <label >User  Name  </label>
+            <input type="text" name="username"  onblur="validateUser(this.value)" required >
+         </div>
+         <div class="formbox">
+            <label > Email   </label>
+            <input type="email" name="mail" required >
+         </div>
+         <div class="formbox">
+            <label> Phone Number </label>
+            <input type="tel" name="phoneno" required>
+         </div>
+         <button type="submit" onclick="validateForm() , setUserCookie()"> Submit </button>
+     </form>
+
+     <script>
+        function validateForm(){
+           with( Document.forms.loginform )
+           {
+              var  user = username.value;
+              var mail = mail.value;
+              var phone = phoneno.value;
+            console.log(user);
+            console.log(mail);
+            console.log(phone);
+
+         }
+      }
+
+       function   validateUser(Userval){
+         var regex = /^[^0-9]*$/;
+         var hasnumber = regex.test(Userval);
+
+         if (Userval.length !== 0 )
+         {
+          if ( !hasnumber){
+             alert(" UserName cannot have number")
+          }
+         if( Userval.length >8){
+               alert(" Username must be less than 8 charecter ")
+          }
+          if(Userval.length < 0 ){
+               alert(" UserName must have atleast 4 charachter ")
+         }     
+         }
+
+         else{
+             alert (" UserName cannot be Empty ")
+         }
+       } 
+      
+       function setUserCookie() {
+
+         with( Document.forms.loginform)
+         { 
+            var user = username.value;
+            var mail = mail.value;
+            var date = new Date(); 
+            var month = date.getMonth() + 1;
+            date.setMonth(month);
+             
+            Document.cookie = 
+            " UserName = " + user;expires =date;
+
+            Document.cookie = 
+            " Mail ID ="+ mail;
+
+         }
+       }
+
+
+     </script>
+</body>
+</html>
