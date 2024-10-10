@@ -45,7 +45,7 @@ body {
     }
     .content-container {
     flex: 1;
-    padding: 20px;
+    padding: 0PX;
     }
     .content {
     display: none;
@@ -55,9 +55,12 @@ body {
     }
     
     .heading{ 
-        color: #2A2438; 
-        font-size:2rem;
+        color: #FFF;
+        font-size: 2rem;
         font-weight: 700;
+        background: #2A2438;
+        width: 142%;
+        padding: 5vh;
     }
     .homecontent{
         width: 96%;
@@ -72,6 +75,13 @@ body {
       
       
     }
+
+     .listclass {
+        border: 2px solid rgba(65, 21, 148, 0.781);
+        background: #9187AA69;
+        padding: 5vh;
+        border-radius: 8vh;
+     }
     .listclass ul > li {
         font-size: 27px;
          list-style:disclosure-closed;
@@ -80,4 +90,6 @@ body {
     .contentBox{
         font-size: 25px;
         letter-spacing:-0.9PX;
+        padding-top: 9vh;
+
     }

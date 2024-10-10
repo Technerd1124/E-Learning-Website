@@ -8,5 +8,5 @@ var typed = new Typed('#autotype', {
 
  
  function OpenLogin(){ 
-  window.open('https://chatgpt.com/');
+  window.open('login.html');
  }
