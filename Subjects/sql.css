@@ -3,7 +3,8 @@ body {
   margin: 0;
   height: 100vh;
   font-family: Arial, sans-serif;
-  background-color: #dbd8e3;
+  background: #dbd8e3;
+  
 }
 .sidebar {
   width: 250px;
@@ -59,6 +60,12 @@ body {
   padding: 3vh;
   border-radius: 2vh;
 }
+
+.subheading
+{ 
+  position: relative;
+  padding: 12px;
+}
 .homecontent {
   width: 96%;
   border: 2px solid rgba(31, 21, 9, 0);
@@ -87,6 +94,74 @@ body {
     top: 3vh;
     font-size: 24px;
     padding: 7vh;
-    border: 2px solid palevioletred;
+    border: 2px solid rgba(216, 112, 147, 0.082);
     letter-spacing: 1px;
   }
+
+  .Explain_Container{ 
+    font-size: 27px;
+    padding: 2.1vh;
+    margin: 2vh;
+  }
+
+
+   /* ==========  Code Snippet CSS ========   */
+
+
+   .token.keyword{ 
+    color: #c71fdf !important;
+   }
+
+   token.operator{ 
+    color:#02312a !important;
+   }
+   
+   token.punctuation{ 
+    color: #02221f !important;
+   }
+   
+   .example-box {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .example-heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  pre {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-left: 5px solid #2a2438;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  code {
+    font-family: monospace;
+    font-size: 14px;
+    color: #0000cc;
+  }
+  
+  .try-it-button {
+    background-color: #00b300;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .try-it-button:hover {
+    background-color: #009900;
+  }
+  
