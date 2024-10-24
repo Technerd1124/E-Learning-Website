@@ -6,13 +6,18 @@ body {
   background: #dbd8e3;
   
 }
+
 .sidebar {
-  width: 250px;
+  width: auto;
+  height: 200%;
   background: #f4f4f4;
   background-color: #2a2438;
   padding: 10px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
+/* ----- Responsive ------   */
+
+ /* ----- End -----  */
 .sidebar h2 {
   margin-top: 0;
   color: #fff;
@@ -79,10 +84,10 @@ body {
 }
 
 .listclass {
-  border: 2px solid rgba(65, 21, 148, 0.781);
+  border: none;
   background: #9187aa69;
-  padding: 5vh;
-  border-radius: 8vh;
+  padding: 6vh;
+  border-radius: 4vh;
 }
 .listclass ul > li {
   font-size: 27px;
@@ -161,7 +166,51 @@ body {
     cursor: pointer;
   }
   
-  .try-it-button:hover {
-    background-color: #009900;
+   /* =========  SQL Snippet Code End ========   */
+  .tableBox
+  {
+     
+    /* border: 2px solid rebeccapurple; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
   }
-  
+  table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+th, td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+th {
+    background-color: #63487d;
+    color: white;
+    text-align: center;
+
+}
+tr:nth-child(even) {
+  text-align: center;
+
+    background-color: #f2f2f2;
+}
+
+
+/* === Footer CSS From Index =======  */
+.footer_main {
+  position: relative;
+  top: 0;
+  border: 3px solid rgba(255, 0, 0, 0.056);
+  padding: 3vh;
+  background-image: linear-gradient(
+    -225deg,
+    #ff3cac 0%,
+    #562b7c 52%,
+    #2b86c5 100%
+  );
+}

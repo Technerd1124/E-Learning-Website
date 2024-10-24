@@ -10,37 +10,47 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/themes/prism.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/components/prism-sql.min.js"></script>
-    
+      crossorigin="anonymous" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/themes/prism.min.css"
+      rel="stylesheet" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/components/prism-sql.min.js"></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
   </head>
   <body style="background-color: #dbd8e3">
+    <!-- <div class="hamburger" id="hamburger">☰</div> -->
     <div class="sidebar">
       <h2>SQL Tutorial</h2>
       <ul class="nav-list">
-        <!-- Add the 'active' class to the SQL Home link -->
         <li><a href="#home" data-target="home" class="active">SQL Home</a></li>
         <li><a href="#intro" data-target="intro">SQL Intro</a></li>
         <li><a href="#syntax" data-target="syntax">SQL Syntax</a></li>
         <li><a href="#select" data-target="select">SQL Select</a></li>
-        <li>
-          <a href="#distinct" data-target="distinct">SQL Select Distinct</a>
-        </li>
+        <li><a href="#distinct" data-target="distinct">SQL Select Distinct</a></li>
         <li><a href="#where" data-target="where">SQL Where</a></li>
         <li><a href="#orderby" data-target="orderby">SQL Order By</a></li>
         <li><a href="#and" data-target="and">SQL And</a></li>
         <li><a href="#or" data-target="or">SQL Or</a></li>
         <li><a href="#insert" data-target="insert">SQL Insert Into</a></li>
         <li><a href="#null" data-target="null">SQL Null Values</a></li>
-        <!-- Add more links as needed -->
+        <li><a href="#groupby" data-target="groupby">SQL Group By</a></li>
+        <li><a href="#having" data-target="having">SQL Having</a></li>
+        <li><a href="#join" data-target="join">SQL Joins</a></li>
+        <li><a href="#functions" data-target="functions">SQL Functions</a></li>
+        <li><a href="#datatypes" data-target="datatypes">SQL Data Types</a></li>
+        <li><a href="#indexes" data-target="indexes">SQL Indexes</a></li>
+        <li><a href="#constraints" data-target="constraints">SQL Constraints</a></li>
+        <li><a href="#transactions" data-target="transactions">SQL Transactions</a></li>
+        <li><a href="#security" data-target="security">SQL Security</a></li>
+        <li><a href="#optimization" data-target="optimization">SQL Optimization</a></li>
+        <li><a href="#resources" data-target="resources">Resources and References</a></li>
       </ul>
     </div>
 
@@ -179,36 +189,1127 @@
       <div id="select" class="content">
         <div class="heading">SQL Select Statement .</div>
         <div class="Explain_Container">
-          ChatGPT The SELECT statement in SQL is used to retrieve data from a
-          database. It's one of the most commonly used SQL commands, as it
-          allows you to specify exactly which data you want to see from one or
-          more database tables
+          The SELECT statement in SQL is used to retrieve data from a database.
+          It's one of the most commonly used SQL commands, as it allows you to
+          specify exactly which data you want to see from one or more database
+          tables
         </div>
-        <h1 style="text-align: left" class="heading ">  Syntax </h1>
+        <h1 style="text-align: left" class="heading">Syntax</h1>
+        <h1 style="text-align: left" class="subheading">
+          Basic Syntax of the SELECT Statement:
+        </h1>
 
-        <h1 style="text-align: left" class="subheading">  Basic Syntax of the SELECT Statement: </h1>
         <div class="example-box">
-          <div class="example-heading">Example</div>
-          <p>Select all records from the Customers table:</p>
+          <br />
+          <p>2. Selects All Column records from the Specified table:</p>
           <pre><code class="language-sql">
-         SELECT * FROM Customers;
+         SELECT * FROM table_name ;
           </code></pre>
-
-        </div> 
-        <br>
-        <br>
-
+        </div>
         <br/>
+        <h1 style="text-align: left" class="heading">Examples</h1>
+        <h1 style="text-align: left" class="subheading">   Consider A Table Costumer For Example . Having Following Data in the  Table </h1>
+        <div class="tableBox">
+          <table>
+            <thead>
+              <tr>
+                <th>Customer ID</th>
+                <th>First_Name</th>
+                <th>Last_Name</th>
+                <th>Country</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>John</td>
+                <td>Doe</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jane</td>
+                <td>Smith</td>
+                <td>UK</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Michael</td>
+                <td>Brown</td>
+                <td>Canada</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Emily</td>
+                <td>Jones</td>
+                <td>Australia</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="example-box">
+          <p>1. Selects the specified Column records from the Specified </p>
+          <pre><code class="language-sql">
+         SELECT First_Name ,Last_Name  FROM Customer;
+          </code></pre>
+          <h3>OutPut</h3>
+          <div class="tableBox">
+            <table>
+              <thead>
+                <tr>
+                  <th>First_Name</th>
+                  <th>Last_Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>John</td>
+                  <td>Doe</td>
+                </tr>
+                <tr>
+                  <td>Jane</td>
+                  <td>Smith</td>
+                </tr>
+                <tr>
+                  <td>Michael</td>
+                  <td>Brown</td>
+                </tr>
+                <tr>
+                  <td>Emily</td>
+                  <td>Jones</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="example-box">
+          <br />
+          <p>2. Selects All Column records from the Specified table:</p>
+          <pre><code class="language-sql">
+         SELECT * FROM Customer ;
+          </code></pre>
+          <h3>OutPut</h3>
+          <div class="tableBox">
+            <table>
+              <thead>
+                <tr>
+                  <th>Customer ID</th>
+                  <th>First_Name</th>
+                  <th>Last_Name</th>
+                  <th>Country</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>USA</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jane</td>
+                  <td>Smith</td>
+                  <td>UK</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Michael</td>
+                  <td>Brown</td>
+                  <td>Canada</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Emily</td>
+                  <td>Jones</td>
+                  <td>Australia</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
-      <div id="distinct" class="content">Using SQL DISTINCT.</div>
-      <div id="where" class="content">SQL WHERE clause explanation.</div>
-      <div id="orderby" class="content">Ordering results with SQL ORDER BY.</div>
-      <div id="and" class="content">Using AND in SQL queries.</div>
-      <div id="or" class="content">Using OR in SQL queries.</div>
-      <div id="insert" class="content">Inserting data with SQL INSERT INTO.     </div>
-      <div id="null" class="content">Handling NULL values in SQL.</div>
+
+      <!--- ========= Select Distinct Statement  ========= --->
+      <div id="distinct" class="content">
+        <div class="heading">SQL DISTINCT Select Statement .</div>
+        <div class="Explain_Container">
+          The SQL DISTINCT statement is used to return only unique (distinct)
+          values from a column or set of columns. This helps eliminate duplicate
+          rows from the result set.
+        </div>
+        <h1 style="text-align: left" class="heading">Syntax</h1>
+        <div class="example-box">
+          <br />
+          <p class="Explain_Container">
+            This Will Return Only unique value of The Specified Column Of The
+            Table
+          </p>
+          <pre><code class="language-sql">
+                SELECT DISTINCT column_name  FROM Table_name;
+              </code></pre>
+
+          <br />
+          <h1 style="text-align: left" class="heading">Exmaple</h1>
+          <div class="tableBox">
+            <table>
+              <thead>
+                <tr>
+                  <th>Customer ID</th>
+                  <th>First_Name</th>
+                  <th>Last_Name</th>
+                  <th>Country</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>USA</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jane</td>
+                  <td>Smith</td>
+                  <td>UK</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Michael</td>
+                  <td>Brown</td>
+                  <td>Canada</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Emily</td>
+                  <td>Jones</td>
+                  <td>USA</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="example-box">
+            <br />
+            <p class="Explain_Container">
+              Consider The Previous Table Customer
+            </p>
+
+            <pre><code class="language-sql">
+                SELECT DISTINCT  Country  FROM Customer;
+              </code></pre>
+            <br />
+
+            <h3>OutPut</h3>
+            <div class="tableBox">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Country</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>USA</td>
+                  </tr>
+                  <tr>
+                    <td>UK</td>
+                  </tr>
+                  <tr>
+                    <td>Canada</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="Explain_Container">
+              As You can see In the Example That we Specified The Column Country
+              from Table Customer and it only Retured the unique values the
+              Country Containing ( Redundant Data Won't be Shown )
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--- ========= WHERE  ========= --->
+      <div id="where" class="content">
+        <div class="heading">SQL WHERE Clause</div>
+        <div class="Explain_Container">
+          The WHERE statement in SQL is used to filter records that meet a specific condition. It is commonly used with SELECT, UPDATE, DELETE, and other SQL commands to retrieve or modify rows based on the condition specified.
+        </div>
+        <div class="example-box">
+          <h1 style="text-align: left" class="heading">Syntax</h1>
+          <pre><code class="language-sql">  
+            SELECT column1, column2, ...
+            FROM table_name
+            WHERE condition;
+          </code></pre>
+        </div>
+        <div class="example-box">
+          <h1 style="text-align: left" class="heading">Example</h1>
+          <p>Consider a table named <strong>Customers</strong> with the following data:</p>
+          <div class="tableBox">
+            <table>
+              <thead>
+                <tr>
+                  <th>Customer ID</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Country</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>USA</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jane</td>
+                  <td>Smith</td>
+                  <td>UK</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Michael</td>
+                  <td>Brown</td>
+                  <td>Canada</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Emily</td>
+                  <td>Jones</td>
+                  <td>USA</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>To select customers from the USA, you can use the following SQL query:</p>
+          <pre><code class="language-sql">
+            SELECT * FROM Customers
+            WHERE Country = 'USA';
+          </code></pre>
+          <h3>Output</h3>
+          <div class="tableBox">
+            <table>
+              <thead>
+                <tr>
+                  <th>Customer ID</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Country</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>USA</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Emily</td>
+                  <td>Jones</td>
+                  <td>USA</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!--- ========= ORDER BY   ========= --->
+      <div id="orderby" class="content"> 
+        <div class="heading">SQL ORDER BY Clause</div>
+        <div class="Explain_Container">
+          The ORDER BY statement in SQL is used to sort the result set of a query by one or more columns. By default, the ORDER BY clause sorts the records in ascending order. You can specify descending order by using the DESC keyword.
+        </div>
+        <div class="example-box">
+          <h1 style="text-align: left" class="heading">Syntax</h1>
+          <pre><code class="language-sql">  
+            SELECT column1, column2, ...
+            FROM table_name
+            ORDER BY column1 [ASC|DESC], column2 [ASC|DESC], ...;
+          </code></pre>
+        </div>
+  
+        <div class="example-box">
+          <h1 style="text-align: left" class="heading">Example</h1>
+          <p>Consider a table named <strong>Customers</strong> with the following data:</p>
+          <div class="tableBox">
+            <table>
+              <thead>
+                <tr>
+                  <th>Customer ID</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Country</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>USA</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jane</td>
+                  <td>Smith</td>
+                  <td>UK</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Michael</td>
+                  <td>Brown</td>
+                  <td>Canada</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Emily</td>
+                  <td>Jones</td>
+                  <td>USA</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>To select all customers and order them by their last names in ascending order, you can use the following SQL query:</p>
+          <pre><code class="language-sql">
+            SELECT * FROM Customers
+            ORDER BY Last_Name ASC;
+          </code></pre>
+          <h3>Output</h3>
+          <div class="tableBox">
+            <table>
+              <thead>
+                <tr>
+                  <th>Customer ID</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Country</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>USA</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Emily</td>
+                  <td>Jones</td>
+                  <td>USA</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jane</td>
+                  <td>Smith</td>
+                  <td>UK</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Michael</td>
+                  <td>Brown</td>
+                  <td>Canada</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+     <!--- =========  AND CLAUSE  ========= --->
+      <div id="and" class="content">
+        <div class="heading">SQL AND Clause</div>
+  <div class="Explain_Container">
+    The AND operator in SQL is used to combine multiple conditions in a WHERE clause. It allows you to filter records that meet all specified conditions. If any of the conditions separated by AND are false, the entire condition evaluates to false.
+  </div>
+  
+  <div class="example-box">
+    <h1 style="text-align: left" class="heading">Syntax</h1>
+    <pre><code class="language-sql">  
+      SELECT column1, column2, ...
+      FROM table_name
+      WHERE condition1 AND condition2 AND ...;
+    </code></pre>
+  </div>
+  
+  <div class="example-box">
+    <h1 style="text-align: left" class="heading">Example</h1>
+    <p>Consider a table named <strong>Customers</strong> with the following data:</p>
+    <div class="tableBox">
+      <table>
+        <thead>
+          <tr>
+            <th>Customer ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Country</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>John</td>
+            <td>Doe</td>
+            <td>USA</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jane</td>
+            <td>Smith</td>
+            <td>UK</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Michael</td>
+            <td>Brown</td>
+            <td>Canada</td>
+            <td>35</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Emily</td>
+            <td>Jones</td>
+            <td>USA</td>
+            <td>28</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>To select customers from the USA who are over 25 years old, you can use the following SQL query:</p>
+    <pre><code class="language-sql">
+      SELECT * FROM Customers
+      WHERE Country = 'USA' AND Age > 25;
+    </code></pre>
+    <h3>Output</h3>
+    <div class="tableBox">
+      <table>
+        <thead>
+          <tr>
+            <th>Customer ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Country</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>John</td>
+            <td>Doe</td>
+            <td>USA</td>
+            <td>30</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+      </div>
+
+      <!--- =========  OR  CLAUSE  ========= --->
+      <div id="or" class="content">
+        <div class="heading">SQL OR Clause</div>
+        <div class="Explain_Container">
+          The OR operator in SQL is used to combine multiple conditions in a WHERE clause. It allows you to filter records that meet at least one of the specified conditions. If any of the conditions separated by OR are true, the entire condition evaluates to true.
+        </div>
+        
+        <div class="example-box">
+          <h1 style="text-align: left" class="heading">Syntax</h1>
+          <pre><code class="language-sql">  
+            SELECT column1, column2, ...
+            FROM table_name
+            WHERE condition1 OR condition2 OR ...;
+          </code></pre>
+        </div>
+        
+        <div class="example-box">
+          <h1 style="text-align: left" class="heading">Example</h1>
+          <p>Consider a table named <strong>Customers</strong> with the following data:</p>
+          <div class="tableBox">
+            <table>
+              <thead>
+                <tr>
+                  <th>Customer ID</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Country</th>
+                  <th>Age</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>USA</td>
+                  <td>30</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jane</td>
+                  <td>Smith</td>
+                  <td>UK</td>
+                  <td>25</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Michael</td>
+                  <td>Brown</td>
+                  <td>Canada</td>
+                  <td>35</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Emily</td>
+                  <td>Jones</td>
+                  <td>USA</td>
+                  <td>28</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>To select customers from either the USA or Canada, you can use the following SQL query:</p>
+          <pre><code class="language-sql">
+            SELECT * FROM Customers
+            WHERE Country = 'USA' OR Country = 'Canada';
+          </code></pre>
+          <h3>Output</h3>
+          <div class="tableBox">
+            <table>
+              <thead>
+                <tr>
+                  <th>Customer ID</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Country</th>
+                  <th>Age</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>USA</td>
+                  <td>30</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Michael</td>
+                  <td>Brown</td>
+                  <td>Canada</td>
+                  <td>35</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Emily</td>
+                  <td>Jones</td>
+                  <td>USA</td>
+                  <td>28</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>    
+
+     <!--- =========  INSERT  CLAUSE  ========= --->
+     <div id="insert" class="content">
+      <div class="heading">SQL INSERT INTO Clause</div>
+      <div class="Explain_Container">
+        The INSERT INTO statement in SQL is used to add new records to a table. You can specify the columns and the values you want to insert. If you do not specify the columns, the values must match the order of the columns in the table.
+      </div>
+      
+      <div class="example-box">
+        <h1 style="text-align: left" class="heading">Syntax</h1>
+        <pre><code class="language-sql">  
+          INSERT INTO table_name (column1, column2, ...)
+          VALUES (value1, value2, ...);
+        </code></pre>
+      </div>
+      
+      <div class="example-box">
+        <h1 style="text-align: left" class="heading">Example</h1>
+        <p>Consider a table named <strong>Customers</strong> with the following structure:</p>
+        <div class="tableBox">
+          <table>
+            <thead>
+              <tr>
+                <th>Customer ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Country</th>
+                <th>Age</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>John</td>
+                <td>Doe</td>
+                <td>USA</td>
+                <td>30</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jane</td>
+                <td>Smith</td>
+                <td>UK</td>
+                <td>25</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>To insert a new customer into the Customers table, you can use the following SQL query:</p>
+        <pre><code class="language-sql">
+          INSERT INTO Customers (First_Name, Last_Name, Country, Age)
+          VALUES ('Emily', 'Jones', 'USA', 28);
+        </code></pre>
+        <h3>Output</h3>
+        <p>After executing the above query, the Customers table will have the following data:</p>
+        <div class="tableBox">
+          <table>
+            <thead>
+              <tr>
+                <th>Customer ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Country</th>
+                <th>Age</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>John</td>
+                <td>Doe</td>
+                <td>USA</td>
+                <td>30</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jane</td>
+                <td>Smith</td>
+                <td>UK</td>
+                <td>25</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Emily</td>
+                <td>Jones</td>
+                <td>USA</td>
+                <td>28</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
 
+     <!--- =========  NULL  CLAUSE  ========= --->
+     <div id="null" class="content">
+      <div class="heading">SQL NULL Values</div>
+      <div class="Explain_Container">
+        In SQL, NULL represents a missing or undefined value. It is used to indicate that a data value does not exist in the database. When working with NULL values, special care must be taken, especially when filtering results in queries.
+      </div>
+      
+      <div class="example-box">
+        <h1 style="text-align: left" class="heading">Syntax</h1>
+        <pre><code class="language-sql">  
+          SELECT column1, column2, ...
+          FROM table_name
+          WHERE column_name IS NULL;
+        </code></pre>
+      </div>
+      
+      <div class="example-box">
+        <h1 style="text-align: left" class="heading">Example</h1>
+        <p>Consider a table named <strong>Customers</strong> with the following data:</p>
+        <div class="tableBox">
+          <table>
+            <thead>
+              <tr>
+                <th>Customer ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Country</th>
+                <th>Age</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>John</td>
+                <td>Doe</td>
+                <td>USA</td>
+                <td>30</td>
+                <td>john.doe@example.com</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jane</td>
+                <td>Smith</td>
+                <td>UK</td>
+                <td>25</td>
+                <td>NULL</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Michael</td>
+                <td>Brown</td>
+                <td>Canada</td>
+                <td>35</td>
+                <td>michael.brown@example.com</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Emily</td>
+                <td>Jones</td>
+                <td>USA</td>
+                <td>28</td>
+                <td>NULL</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>To select customers who do not have an email address, you can use the following SQL query:</p>
+        <pre><code class="language-sql">
+          SELECT * FROM Customers
+          WHERE Email IS NULL;
+        </code></pre>
+        <h3>Output</h3>
+        <div class="tableBox">
+          <table>
+            <thead>
+              <tr>
+                <th>Customer ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Country</th>
+                <th>Age</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2</td>
+                <td>Jane</td>
+                <td>Smith</td>
+                <td>UK</td>
+                <td>25</td>
+                <td>NULL</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Emily</td>
+                <td>Jones</td>
+                <td>USA</td>
+                <td>28</td>
+                <td>NULL</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+     <!--- =========  GROUP BY  CLAUSE  ========= --->
+     <div id="groupby" class="content">
+      <div class="heading">SQL GROUP BY Clause</div>
+      <div class="Explain_Container">
+        The GROUP BY statement in SQL is used to arrange identical data into groups. This is often used in conjunction with aggregate functions like COUNT, SUM, AVG, MAX, or MIN to perform calculations on each group of data.
+      </div>
+      
+      <div class="example-box">
+        <h1 style="text-align: left" class="heading">Syntax</h1>
+        <pre><code class="language-sql">  
+          SELECT column1, aggregate_function(column2)
+          FROM table_name
+          WHERE condition
+          GROUP BY column1;
+        </code></pre>
+      </div>
+      
+      <div class="example-box">
+        <h1 style="text-align: left" class="heading">Example</h1>
+        <p>Consider a table named <strong>Orders</strong> with the following data:</p>
+        <div class="tableBox">
+          <table>
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer ID</th>
+                <th>Amount</th>
+                <th>Order Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>100</td>
+                <td>2023-01-01</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>2</td>
+                <td>150</td>
+                <td>2023-01-02</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>1</td>
+                <td>200</td>
+                <td>2023-01-03</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>3</td>
+                <td>250</td>
+                <td>2023-01-04</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>To calculate the total amount spent by each customer, you can use the following SQL query:</p>
+        <pre><code class="language-sql">
+          SELECT Customer_ID, SUM(Amount) AS Total_Spent
+          FROM Orders
+          GROUP BY Customer_ID;
+        </code></pre>
+        <h3>Output</h3>
+        <div class="tableBox">
+          <table>
+            <thead>
+              <tr>
+                <th>Customer ID</th>
+                <th>Total Spent</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>300</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>150</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>250</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+     <!--- =========   HAVING   CLAUSE  ========= --->
+     <div id="having" class="content">
+      <div class="heading">SQL HAVING Clause</div>
+      <div class="Explain_Container">
+        The HAVING clause in SQL is used to filter records that work on summarized group data. It is often used in conjunction with the GROUP BY clause to apply conditions to the grouped records.
+      </div>
+      
+      <div class="example-box">
+        <h1 style="text-align: left" class="heading">Syntax</h1>
+        <pre><code class="language-sql">  
+          SELECT column1, aggregate_function(column2)
+          FROM table_name
+          GROUP BY column1
+          HAVING condition;
+        </code></pre>
+      </div>
+      
+      <div class="example-box">
+        <h1 style="text-align: left" class="heading">Example</h1>
+        <p>Consider a table named <strong>Orders</strong> with the following data:</p>
+        <div class="tableBox">
+          <table>
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer ID</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>2</td>
+                <td>150</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>1</td>
+                <td>200</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>3</td>
+                <td>250</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>To find customers who have spent more than $200 in total, you can use the following SQL query:</p>
+        <pre><code class="language-sql">
+          SELECT Customer_ID, SUM(Amount) AS Total_Spent
+          FROM Orders
+          GROUP BY Customer_ID
+          HAVING SUM(Amount) > 200;
+        </code></pre>
+        <h3>Output</h3>
+        <div class="tableBox">
+          <table>
+            <thead>
+              <tr>
+                <th>Customer ID</th>
+                <th>Total Spent</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>300</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+     <!--- =========   JOIN  CLAUSE  ========= --->
+      <div id="join" class="content">
+        <div class="heading">SQL Joins</div>
+        <div class="Explain_Container">
+          SQL Joins are used to combine rows from two or more tables based on a related column between them. Joins allow you to retrieve data from multiple tables in a single query, which is essential for relational databases.
+        </div>
+      
+        <div class="example-box">
+          <h1 style="text-align: left" class="heading">Types of Joins</h1>
+          <ul>
+            <li><strong>INNER JOIN:</strong> Returns records that have matching values in both tables.</li>
+            <li><strong>LEFT JOIN (or LEFT OUTER JOIN):</strong> Returns all records from the left table and the matched records from the right table. If there is no match, NULL values are returned for columns from the right table.</li>
+            <li><strong>RIGHT JOIN (or RIGHT OUTER JOIN):</strong> Returns all records from the right table and the matched records from the left table. If there is no match, NULL values are returned for columns from the left table.</li>
+            <li><strong>FULL JOIN (or FULL OUTER JOIN):</strong> Returns all records when there is a match in either left or right table records. If there is no match, NULL values are returned for non-matching columns from both tables.</li>
+          </ul>
+        </div>
+      
+        <div class="example-box">
+          <h1 style="text-align: left" class="heading">Example</h1>
+          <p>Consider two tables: <strong>Customers</strong> and <strong>Orders</strong>.</p>
+          <div class="tableBox">
+            <h3>Customers Table:</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Customer ID</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>John</td>
+                  <td>Doe</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jane</td>
+                  <td>Smith</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tableBox">
+            <h3>Orders Table:</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Customer ID</th>
+                  <th>Product</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>101</td>
+                  <td>1</td>
+                  <td>Widget</td>
+                </tr>
+                <tr>
+                  <td>102</td>
+                  <td>1</td>
+                  <td>Gadget</td>
+                </tr>
+                <tr>
+                  <td>103</td>
+                  <td>2</td>
+                  <td>Thingamajig</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>To select all customers along with their orders, you can use the following SQL query with an INNER JOIN:</p>
+          <pre><code class="language-sql">
+            SELECT Customers.First_Name, Customers.Last_Name, Orders.Product
+            FROM Customers
+            INNER JOIN Orders ON Customers.Customer_ID = Orders.Customer_ID;
+          </code></pre>
+          <h3>Output</h3>
+          <div class="tableBox">
+            <table>
+              <thead>
+                <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Product</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>Widget</td>
+                </tr>
+                <tr>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>Gadget</td>
+                </tr>
+                <tr>
+                  <td>Jane</td>
+                  <td>Smith</td>
+                  <td>Thingamajig</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
     <script>
       document.querySelectorAll(".nav-list a").forEach((link) => {
         link.addEventListener("click", (e) => {
@@ -229,5 +1330,28 @@
         });
       });
     </script>
+
+    <!-- <footer class="footer_main"> 
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <p class="col-md-4 mb-0 text-muted">&copy; 2021 Company, Inc</p>
+        <a href="/"
+          class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+          <svg class="bi me-2" width="40" height="32">
+            <use xlink:href="#bootstrap" />
+          </svg>
+        </a>
+        <ul class="nav col-md-4 justify-content-end">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+        </ul>
+      </footer> -->
+      <script>
+
+  
+      </script>
   </body>
+
 </html>
