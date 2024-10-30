@@ -1,0 +1,240 @@
+.bodyclass {
+    display: flex;
+    margin: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #dbd8e3;
+  }
+  
+  /* Base styles for the sidebar */
+  .sidebar {
+    width: 250px; /* Width of the sidebar */
+    background-color: #343a40; /* Dark background */
+    position: fixed; /* Fixed position */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    height: 0; /* Start with height 0 for dropdown effect */
+    overflow: hidden; /* Hide overflow */
+    transition: height 0.3s ease; /* Smooth transition for height */
+    padding: 10px; /* Padding inside the sidebar */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  }
+  
+  .sidebar h2 {
+    margin-top: 0;
+    color: #fff;
+  }
+  
+  .sidebar li {
+    background-color: #5c5470;
+    border-radius: 6vh;
+  }
+  
+  .nav-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-list li {
+    margin: 10px 0;
+  }
+  
+  .nav-list a {
+    text-decoration: none;
+    color: #fffefe;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .nav-list a:hover {
+    background: #8e85b87c;
+    border-radius: 6vh;
+  }
+  
+  .content-container {
+    flex: 1;
+    padding: 2vh;
+  }
+  
+  .content {
+    display: none;
+  }
+  
+  .active {
+    display: block;
+  }
+  
+  .heading {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    background: #2a2438;
+    padding: 3vh;
+    border-radius: 2vh;
+  }
+  
+  .subheading {
+    position: relative;
+    padding: 12px;
+  }
+  
+  .homecontent {
+    width: 96%;
+    border: 2px solid rgba(31, 21, 9, 0);
+    color: black;
+    font-size: 27px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    padding: 8vh;
+    background: #dbd8e3;
+  }
+  
+  .listclass {
+    border: none;
+    background: #9187aa69;
+    padding: 6vh;
+    border-radius: 4vh;
+  }
+  
+  .listclass ul > li {
+    font-size: 27px;
+    list-style: disclosure-closed;
+  }
+  
+  .contentBox {
+    position: relative;
+    top: 3vh;
+    font-size: 24px;
+    padding: 7vh;
+    border: 2px solid rgba(216, 112, 147, 0.082);
+    letter-spacing: 1px;
+  }
+  
+  .Explain_Container {
+    font-size: 27px;
+    padding: 2.1vh;
+    margin: 2vh;
+  }
+  
+  /* ==========  Code Snippet CSS ========   */
+  
+  .token.keyword {
+    color: #c71fdf !important;
+  }
+  
+  token.operator {
+    color: #02312a !important;
+  }
+  
+  token.punctuation {
+    color: #02221f !important;
+  }
+  
+  .example-box {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .example-heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  pre {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-left: 5px solid #2a2438;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  code {
+    font-family: monospace;
+    font-size: 14px;
+    color: #0000cc;
+  }
+  
+  /* =========  SQL Snippet Code End ========   */
+  .tableBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+  }
+  
+  th,
+  td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #63487d;
+    color: white;
+    text-align: center;
+  }
+  
+  tr:nth-child(even) ⬤
+  .footerClass {
+    border: 2px solid red;
+    position: absolute;
+    top: 10vh;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  /* ===== Hamburger = Example == */
+  
+  .logo {
+    font-size: 24px;
+    color: white;
+  }
+  
+  .hamburger {
+    font-size: 30px;
+    color: white;
+    display: none; /* Hidden on larger screens */
+    cursor: pointer;
+  }
+  
+  @media (max-width: 508px) {
+    .hamburger {
+      display: block; /* Show hamburger on small screens */
+    }
+  
+    .nav-list {
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 10px 0;
+    }
+  
+    .nav-list.active {
+      display: flex;
+    }
+  
+    .nav-list li {
+      text-align: center;
+      padding: 10px 0;
+      border-top: 1px solid #444;
+    }
+  }
+  

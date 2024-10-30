@@ -1,23 +1,19 @@
-body {
+.bodyclass {
   display: flex;
   margin: 0;
   height: 100vh;
   font-family: Arial, sans-serif;
   background: #dbd8e3;
-  
 }
-
 .sidebar {
-  width: auto;
+  width: 15%;
   height: 200%;
   background: #f4f4f4;
   background-color: #2a2438;
   padding: 10px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
-/* ----- Responsive ------   */
 
- /* ----- End -----  */
 .sidebar h2 {
   margin-top: 0;
   color: #fff;
@@ -47,7 +43,7 @@ body {
 }
 .content-container {
   flex: 1;
-  padding:2vh;
+  padding: 2vh;
 }
 .content {
   display: none;
@@ -61,13 +57,11 @@ body {
   font-size: 2rem;
   font-weight: 700;
   background: #2a2438;
-  /* width: -8%; */
   padding: 3vh;
   border-radius: 2vh;
 }
 
-.subheading
-{ 
+.subheading {
   position: relative;
   padding: 12px;
 }
@@ -95,122 +89,208 @@ body {
 }
 
 .contentBox {
-    position: relative;
-    top: 3vh;
-    font-size: 24px;
-    padding: 7vh;
-    border: 2px solid rgba(216, 112, 147, 0.082);
-    letter-spacing: 1px;
-  }
-
-  .Explain_Container{ 
-    font-size: 27px;
-    padding: 2.1vh;
-    margin: 2vh;
-  }
-
-
-   /* ==========  Code Snippet CSS ========   */
-
-
-   .token.keyword{ 
-    color: #c71fdf !important;
-   }
-
-   token.operator{ 
-    color:#02312a !important;
-   }
-   
-   token.punctuation{ 
-    color: #02221f !important;
-   }
-   
-   .example-box {
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  .example-heading {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  pre {
-    background-color: #f0f0f0;
-    padding: 10px;
-    border-left: 5px solid #2a2438;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
-  
-  code {
-    font-family: monospace;
-    font-size: 14px;
-    color: #0000cc;
-  }
-  
-  .try-it-button {
-    background-color: #00b300;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    border-radius: 5px;
-    margin-top: 10px;
-    cursor: pointer;
-  }
-  
-   /* =========  SQL Snippet Code End ========   */
-  .tableBox
-  {
-     
-    /* border: 2px solid rebeccapurple; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-  }
-  table {
-    width: 70%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 18px;
-    text-align: left;
+  position: relative;
+  top: 3vh;
+  font-size: 24px;
+  padding: 7vh;
+  border: 2px solid rgba(216, 112, 147, 0.082);
+  letter-spacing: 1px;
 }
-th, td {
-    padding: 15px;
-    text-align: center;
-    border: 1px solid #ddd;
+
+.Explain_Container {
+  font-size: 27px;
+  padding: 2.1vh;
+  margin: 2vh;
+}
+
+/* ==========  Code Snippet CSS ========   */
+
+.token.keyword {
+  color: #c71fdf !important;
+}
+
+token.operator {
+  color: #02312a !important;
+}
+
+token.punctuation {
+  color: #02221f !important;
+}
+
+.example-box {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.example-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+pre {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-left: 5px solid #2a2438;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+code {
+  font-family: monospace;
+  font-size: 14px;
+  color: #0000cc;
+}
+
+/* =========  SQL Snippet Code End ========   */
+.tableBox {
+  /* border: 2px solid rebeccapurple; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+table {
+  width: 70%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+th,
+td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
 }
 th {
-    background-color: #63487d;
-    color: white;
-    text-align: center;
-
+  background-color: #63487d;
+  color: white;
+  text-align: center;
 }
 tr:nth-child(even) {
   text-align: center;
 
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
-
 
 /* === Footer CSS From Index =======  */
-.footer_main {
-  position: relative;
-  top: 0;
-  border: 3px solid rgba(255, 0, 0, 0.056);
-  padding: 3vh;
-  background-image: linear-gradient(
-    -225deg,
-    #ff3cac 0%,
-    #562b7c 52%,
-    #2b86c5 100%
-  );
+.footerClass {
+  border: 2px solid red;
+  position: absolute;
+  top: 10vh;
+  display: flex;
+  flex-direction: row;
 }
+
+/* =====  = Example == */
+
+/* // X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .sidebar {
+    width: 21%;
+    height: 200%;
+    background: #f4f4f4;
+    background-color: #2a2438;
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+  }
+
+  .sidebar h2 {
+    margin-top: 0;
+    color: #fff;
+    font-size: 1.1rem;
+  }
+  .sidebar li {
+    background-color: #5c5470;
+    border-radius: 1vh;
+    padding: 0;
+    font-size: 4vh;
+  }
+  .heading {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    background: #2a2438;
+    padding: 2vh;
+    border-radius: 2vh;
+  }
+  .homecontent {
+    width: 96%;
+    border: 2px solid rgba(31, 21, 9, 0);
+    color: black;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    padding: 8vh;
+    background: #dbd8e3;
+  }
+  .listclass ul > li {
+    font-size: 15px;
+    list-style: disclosure-closed;
+  }
+}
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) and  (max-width: 600px) {
+  .sidebar {
+    width: 19%;
+    height: 200%;
+    background: #f4f4f4;
+    background-color: #2a2438;
+    padding: 1px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    font-size: 5vh;
+  }
+  .sidebar h2 {
+    margin-top: 0;
+    color: #fff;
+    text-align: center;
+  }
+  .listclass ul > li {
+    font-size: 13px;
+    list-style: disclosure-closed;
+  }
+  .heading {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    background: #2a2438;
+    padding: 3vh;
+    border-radius: 2vh;
+  }
+  .subheading {
+    position: relative;
+    padding: 12px;
+    font-size: 23px;
+  }
+  .listclass ul > li {
+    font-size: 21px;
+    list-style: disclosure-closed;
+  }
+  .contentBox {
+    position: relative;
+    top: 3vh;
+    font-size: 19px;
+    padding: 7vh;
+    border: 2px solid rgba(216, 112, 147, 0.082);
+    letter-spacing: 1px;
+  }
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+}
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+}
+
+/* // X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+}
+
+/* // XX-Large devices (larger desktops) */
+/* // No media query since the xxl breakpoint has no upper bound on its width */

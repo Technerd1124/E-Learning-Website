@@ -6,7 +6,7 @@ var typed = new Typed('#autotype', {
   });
  // setInterval( Typed(), 200);
 
- 
- function OpenLogin(){ 
-  window.open('login.html');
- }
+ function toggleMenu() {
+  const navLinks = document.getElementById("navLinks");
+  navLinks.classList.toggle("active");
+}

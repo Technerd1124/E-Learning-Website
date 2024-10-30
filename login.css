@@ -3,11 +3,8 @@
 body {
 font-family: Arial, sans-serif;
 background-color: #1459a725;
-display: flex;
-justify-content: center;
-align-items: center;
 height: 100vh;
-margin: 0;
+margin: auto;
 }
 
 /* Form styling */
@@ -19,6 +16,15 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 width: 350px;
 }
 
+.formbody{
+    position: relative;
+    top: 20ch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
 /* Formbox styling */
 .formbox {
 margin-bottom: 15px;
@@ -53,7 +59,7 @@ outline: none;
 
 /* Button styling */
 button {
-background-color: #4c2eb6;
+background-color: #312a40;
 color: white;
 padding: 12px 20px;
 border: none;
@@ -64,5 +70,15 @@ font-size: 16px;
 }
 
 button:hover {
-background-color: #1a1283;
+background-color: #372f4bd6;
+}
+
+.heading {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    background: #2a2438;
+    padding: 3vh;
+    border-radius: 0vh;
+  
 }

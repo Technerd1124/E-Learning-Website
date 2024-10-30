@@ -6,6 +6,10 @@
     <title>SQL Tutorial</title>
     <link rel="stylesheet" href="/E-Learning-Website/Subjects/sql.css" />
     <link rel="stylesheet" href="./sql.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,8 +20,7 @@
       rel="stylesheet" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/prism.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/components/prism-sql.min.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/components/prism-sql.min.js"></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -25,11 +28,15 @@
       crossorigin="anonymous"></script>
   </head>
   <body style="background-color: #dbd8e3">
-    <!-- <div class="hamburger" id="hamburger">☰</div> -->
+    <div class="bodyclass">
+    <!-- <div class="hamburger" onclick="toggleMenu()">
+      ☰
+    </div> -->
+
     <div class="sidebar">
       <h2>SQL Tutorial</h2>
-      <ul class="nav-list">
-        <li><a href="#home" data-target="home" class="active">SQL Home</a></li>
+        <ul class="nav-list" id="navLinks">
+        <li><a href="#home"  data-target="home"class="active">SQL Home</a></li>
         <li><a href="#intro" data-target="intro">SQL Intro</a></li>
         <li><a href="#syntax" data-target="syntax">SQL Syntax</a></li>
         <li><a href="#select" data-target="select">SQL Select</a></li>
@@ -40,18 +47,16 @@
         <li><a href="#or" data-target="or">SQL Or</a></li>
         <li><a href="#insert" data-target="insert">SQL Insert Into</a></li>
         <li><a href="#null" data-target="null">SQL Null Values</a></li>
+        <li><a href="#aggregate" data-target="aggregate">SQL aggregate Functions  </a></li>
         <li><a href="#groupby" data-target="groupby">SQL Group By</a></li>
         <li><a href="#having" data-target="having">SQL Having</a></li>
         <li><a href="#join" data-target="join">SQL Joins</a></li>
         <li><a href="#functions" data-target="functions">SQL Functions</a></li>
-        <li><a href="#datatypes" data-target="datatypes">SQL Data Types</a></li>
         <li><a href="#indexes" data-target="indexes">SQL Indexes</a></li>
         <li><a href="#constraints" data-target="constraints">SQL Constraints</a></li>
         <li><a href="#transactions" data-target="transactions">SQL Transactions</a></li>
-        <li><a href="#security" data-target="security">SQL Security</a></li>
-        <li><a href="#optimization" data-target="optimization">SQL Optimization</a></li>
-        <li><a href="#resources" data-target="resources">Resources and References</a></li>
       </ul>
+
     </div>
 
     <div class="content-container">
@@ -59,7 +64,6 @@
       <!-- Add 'active' class to make Home visible by default -->
       <div id="home" class="content active">
         <div class="heading">Welcome to SQL E-Learning</div>
-
         <div class="homecontent">
           <p>
             Unlock your potential with our expertly crafted SQL courses. Whether
@@ -94,7 +98,6 @@
           <div class="heading">Join Now to Explore Our Courses!</div>
         </div>
       </div>
-
       <!-- =========  IntroDuction  =========  -->
       <div id="intro" class="content">
         <div class="heading">Introduction To SQL</div>
@@ -1215,7 +1218,7 @@
         </div>
       
         <div class="example-box">
-          <h1 style="text-align: left" class="heading">Example</h1>
+          <h1 style="text-align: left" class="heading"> INNER JOIN Example</h1>
           <p>Consider two tables: <strong>Customers</strong> and <strong>Orders</strong>.</p>
           <div class="tableBox">
             <h3>Customers Table:</h3>
@@ -1306,52 +1309,566 @@
             </table>
           </div>
         </div>
+        
+        <div class="example-box">
+          <h1 style="text-align: left" class="heading">LEFT JOIN Example</h1>
+          <p>To select all customers and their orders, including customers without orders, you can use the following SQL query with a LEFT JOIN:</p>
+          <pre><code class="language-sql">
+            SELECT Customers.First_Name, Customers.Last_Name, Orders.Product
+            FROM Customers
+            LEFT JOIN Orders ON Customers.Customer_ID = Orders.Customer_ID;
+          </code></pre>
+          <h3>Output</h3>
+          <div class="tableBox">
+            <table>
+              <thead>
+                <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Product</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>Widget</td>
+                </tr>
+                <tr>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>Gadget</td>
+                </tr>
+                <tr>
+                  <td>Jane</td>
+                  <td>Smith</td>
+                  <td>Thingamajig</td>
+                </tr>
+                <tr>
+                  <td>Bob</td>
+                  <td>Johnson</td>
+                  <td>NULL</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
       </div>
 
+      <div class="example-box">
+        <h1 style="text-align: left" class="heading">RIGHT JOIN Example</h1>
+        <p>To select all orders and their corresponding customers, including orders without customers, you can use the following SQL query with a RIGHT JOIN:</p>
+        <pre><code class="language-sql">
+          SELECT Customers.First_Name, Customers.Last_Name, Orders.Product
+          FROM Customers
+          RIGHT JOIN Orders ON Customers.Customer_ID = Orders.Customer_ID;
+        </code></pre>
+        <h3>Output</h3>
+        <div class="tableBox">
+          <table>
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Product</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>Widget</td>
+              </tr>
+              <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>Gadget</td>
+              </tr>
+              <tr>
+                <td>Jane</td>
+                <td>Smith</td>
+                <td>Thingamajig</td>
+              </tr>
+              <tr>
+                <td>NULL</td>
+                <td>NULL</td>
+                <td>Unordered Item</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="example-box">
+        <h1 style="text-align: left" class="heading">FULL OUTER JOIN Example</h1>
+        <p>To select all customers and all orders, including customers without orders and orders without customers, you can use the following SQL query with a FULL OUTER JOIN:</p>
+        <pre><code class="language-sql">
+          SELECT Customers.First_Name, Customers.Last_Name, Orders.Product
+          FROM Customers
+          FULL OUTER JOIN Orders ON Customers.Customer_ID = Orders.Customer_ID;
+        </code></pre>
+        <h3>Output</h3>
+        <div class="tableBox">
+          <table>
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Product</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>Widget</td>
+              </tr>
+              <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>Gadget</td>
+              </tr>
+              <tr>
+                <td>Jane</td>
+                <td>Smith</td>
+                <td>Thingamajig</td>
+              </tr>
+              <tr>
+                <td>NULL</td>
+                <td>NULL</td>
+                <td>Unordered Item</td>
+              </tr>
+              <tr>
+                <td>Bob</td>
+                <td>Johnson</td>
+                <td>NULL</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-    </div>
-    <script>
-      document.querySelectorAll(".nav-list a").forEach((link) => {
-        link.addEventListener("click", (e) => {
-          e.preventDefault(); // Prevent the default anchor behavior
-          const targetId = link.getAttribute("data-target");
-          // Hide all content sections
-          document.querySelectorAll(".content").forEach((content) => {
-            content.classList.remove("active");
-          });
-          // Show the targeted content section
-          document.getElementById(targetId).classList.add("active");
-          // Remove 'active' class from all links
-          document.querySelectorAll(".nav-list a").forEach((a) => {
-            a.classList.remove("active");
-          });
-          // Add 'active' class to the clicked link
-          link.classList.add("active");
-        });
-      });
-    </script>
+  </div>
 
-    <!-- <footer class="footer_main"> 
-      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <p class="col-md-4 mb-0 text-muted">&copy; 2021 Company, Inc</p>
-        <a href="/"
-          class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-          <svg class="bi me-2" width="40" height="32">
-            <use xlink:href="#bootstrap" />
-          </svg>
-        </a>
-        <ul class="nav col-md-4 justify-content-end">
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+    <!--- =========  aggregate Funtions    ========= --->
+    <div id="aggregate" class="content">
+      <div class="heading">SQL Aggregate Functions</div>
+      <div class="Explain_Container">
+        SQL Aggregate Functions are used to perform calculations on a set of values and return a single value. These functions are often used in conjunction with the GROUP BY clause to summarize data. Common aggregate functions include COUNT, SUM, AVG, MAX, and MIN.
+      </div>
+    
+      <div class="example-box">
+        <h1 style="text-align: left" class="heading">Common Aggregate Functions</h1>
+        <ul>
+          <li><strong>COUNT:</strong> Returns the number of rows that match a specified criterion.</li>
+          <li><strong>SUM:</strong> Returns the total sum of a numeric column.</li>
+          <li><strong>AVG:</strong> Returns the average value of a numeric column.</li>
+          <li><strong>MAX:</strong> Returns the maximum value in a set.</li>
+          <li><strong>MIN:</strong> Returns the minimum value in a set.</li>
         </ul>
-      </footer> -->
-      <script>
+      </div>
+    
+      <div class="example-box">
+        <h1 style="text-align: left" class="heading">Example</h1>
+        <p>Consider a table named <strong>Sales</strong> with the following data:</p>
+        <div class="tableBox">
+          <table>
+            <thead>
+              <tr>
+                <th>Sale ID</th>
+                <th>Product</th>
+                <th>Amount</th>
+                <th>Quantity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Widget</td>
+                <td>100</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Gadget</td>
+                <td>150</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Thingamajig</td>
+                <td>200</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Widget</td>
+                <td>100</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>To find the total sales amount and the average quantity sold, you can use the following SQL query:</p>
+        <pre><code class="language-sql">
+          SELECT SUM(Amount) AS Total_Sales, AVG(Quantity) AS Average_Quantity
+          FROM Sales;
+        </code></pre>
+        
+        <h3>Output</h3>
+        <div class="tableBox">
+          <table>
+            <thead>
+              <tr>
+                <th>Total Sales</th>
+                <th>Average Quantity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>550</td>
+                <td>1.75</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <p>In this example, the total sales amount is calculated as $550, and the average quantity sold is 1.75.</p>
+      </div>
+    </div>
+    
 
+     <!-- ---------- Functions -------  -->
+     <div id="functions" class="content">
+      <div class="heading">SQL Functions</div>
+      <div class="Explain_Container">
+          SQL functions are predefined operations that allow you to perform calculations, manipulate data, and return specific results from the database. They are essential for data analysis and reporting in SQL queries. Functions can be categorized into aggregate functions, scalar functions, string functions, and date functions, each serving different purposes in data handling.
+      </div>
+      
+      <div class="example-box">
+          <h1 style="text-align: left" class="heading">Syntax</h1>
+          <pre><code class="language-sql">
+              -- Aggregate Function Example
+              SELECT AGGREGATE_FUNCTION(column_name)
+              FROM table_name
+              WHERE condition;
   
-      </script>
-  </body>
+              -- Scalar Function Example
+              SELECT SCALAR_FUNCTION(column_name)
+              FROM table_name;
+          </code></pre>
+      </div>
+      
+      <div class="example-box">
+          <h1 style="text-align: left" class="heading">Example</h1>
+          <p>Consider a table named <strong>Sales</strong> with the following data:</p>
+          <div class="tableBox">
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Sale ID</th>
+                          <th>Product</th>
+                          <th>Amount</th>
+                          <th>Quantity</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>1</td>
+                          <td>Widget</td>
+                          <td>100</td>
+                          <td>2</td>
+                      </tr>
+                      <tr>
+                          <td>2</td>
+                          <td>Gadget</td>
+                          <td>150</td>
+                          <td>1</td>
+                      </tr>
+                      <tr>
+                          <td>3</td>
+                          <td>Thingamajig</td>
+                          <td>200</td>
+                          <td>3</td>
+                      </tr>
+                      <tr>
+                          <td>4</td>
+                          <td>Widget</td>
+                          <td>100</td>
+                          <td>1</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+          <p>To calculate the total sales amount and the average quantity sold, you can use the following SQL query:</p>
+          <pre><code class="language-sql">
+              SELECT SUM(Amount) AS Total_Sales, AVG(Quantity) AS Average_Quantity
+              FROM Sales;
+          </code></pre>
+          
+          <h3>Output</h3>
+          <div class="tableBox">
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Total Sales</th>
+                          <th>Average Quantity</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>550</td>
+                          <td>1.75</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+          
+          <p>In this example, the total sales amount is calculated as $550, and the average quantity sold is 1.75.</p>
+      </div>
+  </div>
+      
+  <!-- =========== INdexes ======  -->
+  <div id="indexes" class="content">
+    <div class="heading">SQL Indexes</div>
+    <div class="Explain_Container">
+        An index in SQL is a database object that improves the speed of data retrieval operations on a table at the cost of additional space and slower writes. Indexes are used to quickly locate and access the data in a database table without having to search every row. They can be created on one or more columns of a table and are essential for optimizing query performance.
+    </div>
+    
+    <div class="example-box">
+        <h1 style="text-align: left" class="heading">Syntax</h1>
+        <pre><code class="language-sql">
+            CREATE INDEX index_name
+            ON table_name (column1, column2, ...);
+        </code></pre>
+    </div>
+    
+    <div class="example-box">
+        <h1 style="text-align: left" class="heading">Example</h1>
+        <p>Consider a table named <strong>Employees</strong> with the following data:</p>
+        <div class="tableBox">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Employee ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Department</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>HR</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jane</td>
+                        <td>Smith</td>
+                        <td>IT</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Michael</td>
+                        <td>Brown</td>
+                        <td>Finance</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Emily</td>
+                        <td>Jones</td>
+                        <td>IT</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>To create an index on the <strong>Last Name</strong> column of the <strong>Employees</strong> table, you can use the following SQL query:</p>
+        <pre><code class="language-sql">
+            CREATE INDEX idx_last_name
+            ON Employees (Last_Name);
+        </code></pre>
+        
+        <h3>Output</h3>
+        <p>After executing the above query, an index named <strong>idx_last_name</strong> will be created on the <strong>Last Name</strong> column, which can improve the performance of queries that filter or sort by this column.</p>
+    </div>
+</div>
 
+   <!-- ====== Constraints ======  -->
+   <div id="constraints" class="content">
+    <div class="heading">SQL Constraints</div>
+    <div class="Explain_Container">
+        SQL constraints are rules applied to columns in a table to ensure the integrity and validity of the data. They help enforce data integrity by restricting the type of data that can be stored in a table. Common types of constraints include PRIMARY KEY, FOREIGN KEY, UNIQUE, NOT NULL, and CHECK constraints, each serving a specific purpose in maintaining data quality and relationships.
+    </div>
+    
+    <div class="example-box">
+        <h1 style="text-align: left" class="heading">Syntax</h1>
+        <pre><code class="language-sql">
+            CREATE TABLE table_name (
+                column1 datatype constraint,
+                column2 datatype constraint,
+                ...
+                CONSTRAINT constraint_name PRIMARY KEY (column_name),
+                CONSTRAINT constraint_name FOREIGN KEY (column_name) REFERENCES other_table (column_name)
+            );
+        </code></pre>
+    </div>
+    
+    <div class="example-box">
+        <h1 style="text-align: left" class="heading">Example</h1>
+        <p>Consider a table named <strong>Orders</strong> that references a <strong>Customers</strong> table:</p>
+        <div class="tableBox">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer ID</th>
+                        <th>Order Date</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>101</td>
+                        <td>2023-01-15</td>
+                        <td>250.00</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>102</td>
+                        <td>2023-01-16</td>
+                        <td>150.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>To create the <strong>Orders</strong> table with constraints, you can use the following SQL query:</p>
+        <pre><code class="language-sql">
+            CREATE TABLE Orders (
+                Order_ID INT PRIMARY KEY,
+                Customer_ID INT,
+                Order_Date DATE,
+                Amount DECIMAL(10, 2),
+                CONSTRAINT fk_customer
+                FOREIGN KEY (Customer_ID) REFERENCES Customers(Customer_ID)
+                ON DELETE CASCADE
+            );
+        </code></pre>
+        
+        <h3>Output</h3>
+        <p>In this example, the <strong>Order_ID</strong> is defined as the PRIMARY KEY, ensuring that each order is uniquely identifiable. The <strong>Customer_ID</strong> column is defined as a FOREIGN KEY, establishing a relationship with the <strong>Customers</strong> table. The <strong>ON DELETE CASCADE</strong> option ensures that if a customer is deleted, all their associated orders will also be deleted automatically.</p>
+    </div>
+</div>
+
+
+  <!-- ======== Transactions ====== -->
+  <div id="transactions" class="content">
+    <div class="heading">SQL Transactions</div>
+    <div class="Explain_Container">
+        A transaction in SQL is a sequence of one or more SQL operations that are executed as a single unit of work. Transactions ensure data integrity by allowing you to group multiple operations into a single logical unit. If any operation within the transaction fails, the entire transaction can be rolled back, ensuring that the database remains in a consistent state. The key properties of transactions are encapsulated in the ACID principles: Atomicity, Consistency, Isolation, and Durability.
+    </div>
+    
+    <div class="example-box">
+        <h1 style="text-align: left" class="heading">Syntax</h1>
+        <pre><code class="language-sql">
+            BEGIN TRANSACTION;
+
+            -- SQL operations (INSERT, UPDATE, DELETE)
+            -- Example:
+            INSERT INTO table_name (column1, column2) VALUES (value1, value2);
+
+            COMMIT;  -- Save changes
+            -- or
+            ROLLBACK;  -- Undo changes if an error occurs
+        </code></pre>
+    </div>
+    
+    <div class="example-box">
+        <h1 style="text-align: left" class="heading">Example</h1>
+        <p>Consider a banking application where you want to transfer funds from one account to another:</p>
+        <div class="tableBox">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Account ID</th>
+                        <th>Account Holder</th>
+                        <th>Balance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>1000.00</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Jane Smith</td>
+                        <td>500.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>To transfer $200 from John Doe's account to Jane Smith's account, you can use the following SQL transaction:</p>
+        <pre><code class="language-sql">
+            BEGIN TRANSACTION;
+
+            UPDATE Accounts
+            SET Balance = Balance - 200
+            WHERE Account_ID = 1;
+
+            UPDATE Accounts
+            SET Balance = Balance + 200
+            WHERE Account_ID = 2;
+
+            COMMIT;  -- Save changes
+        </code></pre>
+        
+        <h3>Output</h3>
+        <p>In this example, the transaction ensures that both updates (debit from John Doe's account and credit to Jane Smith's account) are executed together. If either update fails, you can issue a <strong>ROLLBACK</strong> command to undo any changes made during the transaction, keeping the account balances consistent.</p>
+    </div>
+</div>
+  </div>  
+  <!-- End content-container -->
+</div>
+  <!-- --- Footer Navigator --- -->
+   
+   <footer>
+    
+   </footer>
+   <script>
+    document.querySelectorAll(".nav-list a").forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault(); // Prevent the default anchor behavior
+        const targetId = link.getAttribute("data-target");
+        // Hide all content sections
+        document.querySelectorAll(".content").forEach((content) => {
+          content.classList.remove("active");
+        });
+        // Show the targeted content section
+        document.getElementById(targetId).classList.add("active");
+        // Remove 'active' class from all links
+        document.querySelectorAll(".nav-list a").forEach((a) => {
+          a.classList.remove("active");
+        });
+        // Add 'active' class to the clicked link
+        link.classList.add("active");
+      });
+    });
+
+    // JavaScript to toggle the sidebar
+document.querySelector(".hamburger").addEventListener("click", function() {
+  const sidebar = document.querySelector(".sidebar");
+  sidebar.classList.toggle("active"); // Toggle the active class
+  sidebar.classList.toggle("hidden"); // Toggle the hidden class
+});
+
+// JavaScript to toggle the sidebar
+document.querySelector(".hamburger").addEventListener("click", function() {
+  const sidebar = document.querySelector(".sidebar");
+  sidebar.classList.toggle("active"); // Toggle the active class
+});
+   </script>
+  </body>
 </html>
