@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-       <head>
-              <meta charset="UTF-8" />
-              <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-              <meta name="viewport"
-                     content="width=device-width, initial-scale=1.0" />
-              <title>Responsive Pizza Landing Page</title>
-              <!-- Box Icons -->
-              <link
-                     rel="stylesheet"
-                     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
-              <!-- Link To CSS -->
-              <link rel="stylesheet" href="styles.css" />
-              <link rel="stylesheet" href="/login.css">
-              <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.all.min.js"></script>
-              <link
-                rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.min.css"
-              />
-              <style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Tech and Teach</title>
+    <!-- Box Icons -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/login.css">
+    <script
+      src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.all.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.min.css" />
+    <style>
+                
       /* Google Fonts */
       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
       * {
@@ -348,156 +349,159 @@
         }
       }
     </style>
-       </head>
+  </head>
 
-       <body class="active">
-              <!-- Navbar -->
-              <header>
-                     <a href="#" class="logo"> Tech And Teach</a>
-                     <div class="bx bx-menu" id="menu-icon"></div>
+  <body class="active">
+    <!-- Navbar -->
+    <header>
+      <a href="#" class="logo"> Tech And Teach</a>
 
-                     <ul class="navbar">
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about"> Course </a></li>
-                            <!-- <li><a href="#menu"> Explore Courses</a></li> -->
-                            <li><a href="#services">FeedBack</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                            <!-- Dark Mode -->
-                            <div class="bx bx-moon" id="darkmode"></div>
-                     </ul>
-              </header>
-              <!-- Home  Section-->
-              <section class="home" id="home">
-                     <div class="home-text">
-                            <h1>Learn For Free</h1>
-                            <h2>
-                                   Unlock Your Potential with Free Courses<br />
-                                   Anytime, Anywhere!
-                            </h2>
-                     </div>
-                     <div class="home-img">
-                            <img src="/Demo UI/homepageSVG.svg"
-                                   alt="landing Image" />
-                     </div>
-              </section>
+      <div class="bx bx-menu" id="menu-icon"></div>
 
-              <!-- About -->
-              <section class="about" id="about">
-                     <div class="about-img">
-                            <img
-                                   src="/Demo UI/logo.svg"
-                                   alt />
-                     </div>
-                     <div class="about-text">
-                            <span>About Us</span>
-                            <h2>
-                                   Unlocking the Power of Databases
-                                   Together
+      <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about"> Course </a></li>
+        <!-- <li><a href="#menu"> Explore Courses</a></li> -->
+        <li><a href="#services">FeedBack</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <!-- Dark Mode -->
+        <div class="bx bx-moon" id="darkmode"></div>
+      </ul>
+    </header>
+    <!-- Home  Section-->
+    <section class="home" id="home">
+      <div class="home-text">
+        <h1>Learn For Free</h1>
+        <div class="text-overlay">
+          <span id="autotype">
+            Unlock Your Potential with Free Courses
+            Anytime, Anywhere!
+          </span>
+        </div>
+      </div>
+      <div class="home-img">
+        <img src="/Demo UI/homepageSVG.svg"
+          alt="landing Image" />
+      </div>
+    </section>
 
-                            </h2>
-                            <p>
-                                   Welcome to Tech And Teach, your go-to
-                                   platform for mastering SQL and database
-                                   management. We believe that understanding how
-                                   to work with data is an essential skill in
-                                   today’s data-driven world. Our website is
-                                   designed to make learning SQL accessible,
-                                   practical, and impactful for students,
-                                   aspiring data professionals, and anyone
-                                   looking to harness the power of databases.
-                            </p>
-                            <a href="/Subjects/SQL.html" class="btn">Learn Now</a>
-                     </div>
-              </section>
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="about-img">
+        <img
+          src="/Demo UI/logo.svg"
+          alt />
+      </div>
+      <div class="about-text">
+        <span>About Us</span>
+        <h2>
+          Unlocking the Power of Databases
+          Together
 
-            
-    
-              <!-- Feedback -->
-              <section class="services" id="services">
-                
-                <button onclick="show()">Show Sweet Alert</button>
-                <button onclick="showError()">Show Error Alert</button>
-                <div class="heading" style="text-align: center">Log Into Tech & Teach</div>
-                <div class="formbody"> 
-                  <form name="loginform" onsubmit="return validForm()" method="GET"  action="index.html" m>
-                    <h3 style="text-align: center">Login Here</h3>
-                    <div class="formbox">
-                      <label>User Name</label>
-                      <input type="text" name="username" />
-                    </div>
-                    <div class="formbox">
-                      <label>Email</label>
-                      <input type="email" name="mail" />
-                    </div>
-                    <div class="formbox">
-                      <label>Phone Number</label>
-                      <input type="tel" name="phoneno" />
-                    </div>
-                    <button type="submit">Submit</button>
-                  </form>
-                </div>     
-              </section>
+        </h2>
+        <p>
+          Welcome to Tech And Teach, your go-to
+          platform for mastering SQL and database
+          management. We believe that understanding how
+          to work with data is an essential skill in
+          today’s data-driven world. Our website is
+          designed to make learning SQL accessible,
+          practical, and impactful for students,
+          aspiring data professionals, and anyone
+          looking to harness the power of databases.
+        </p>
+        <a href="/Subjects/SQL.html" class="btn">Learn Now</a>
+      </div>
+    </section>
 
-              <!-- Connect -->
-              <section class="connect">
-                     <div class="connect-text">
-                            <span>Let's Talk</span>
-                            <h2>Connect now</h2>
-                     </div>
-                     <a href="#" class="btn">Contact Us</a>
-              </section>
+    <!-- Feedback -->
+    <section class="services" id="services">
 
-              <!-- Contact -->
-              <section class="contact" id="contact">
-                     <div class="contact-box">
-                            <h3>Pizza Pie</h3>
-                            <span>Connect With Us</span>
-                            <div class="social">
-                                   <a href="#"><i
-                                                 class="bx bxl-facebook"></i></a>
-                                   <a href="#"><i
-                                                 class="bx bxl-twitter"></i></a>
-                                   <a href="#"><i
-                                                 class="bx bxl-instagram"></i></a>
-                            </div>
-                     </div>
-                     <div class="contact-box">
-                            <h3>Menu Links</h3>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#menu">Menu</a></li>
-                            <li><a href="#services">Service</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                     </div>
-                     <div class="contact-box">
-                            <h3>Quick Links</h3>
-                            <li><a href="#Contact">Contact</a></li>
-                            <li><a href="#Privacy Policy">Privacy
-                                          Policy</a></li>
-                            <li><a href="#Disclaimer">Disclaimer</a></li>
-                            <li><a href="#Terms Of Use">Terms Of Use</a></li>
-                     </div>
-                     <div class="contact-box address">
-                            <h3>Contact</h3>
-                            <i class="bx bxs-map"><span>005, Lorem ipsum dolor,
-                                          sit amet consectetur, India</span></i>
-                            <i class="bx bxs-phone"><span>+91 000 999
-                                          5555</span></i>
-                            <i
-                                   class="bx bxs-envelope"><span>Example@email.com</span></i>
-                     </div>
-              </section>
+      <button onclick="show()">Show Sweet Alert</button>
+      <button onclick="showError()">Show Error Alert</button>
+      <div class="heading" style="text-align: center">Log Into Tech &
+        Teach</div>
+      <div class="formbody">
+        <form name="loginform" onsubmit="return validForm()" method="GET"
+          action="index.html" m>
+          <h3 style="text-align: center">Login Here</h3>
+          <div class="formbox">
+            <label>User Name</label>
+            <input type="text" name="username" />
+          </div>
+          <div class="formbox">
+            <label>Email</label>
+            <input type="email" name="mail" />
+          </div>
+          <div class="formbox">
+            <label>Phone Number</label>
+            <input type="tel" name="phoneno" />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
 
-              <!-- Copyright -->
-              <div class="copyright">
-                     <p>© Asslone4 All Right Reserved.</p>
-              </div>
+    <!-- Connect -->
+    <section class="connect">
+      <div class="connect-text">
+        <span>Let's Talk</span>
+        <h2>Connect now</h2>
+      </div>
+      <a href="#" class="btn">Contact Us</a>
+    </section>
 
-              <!-- Scroll Reveal -->
-              <script src="https://unpkg.com/scrollreveal"></script>
-              <!-- Link To JavaScript -->
-              <script src="script.js"></script>
-              <script>
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <div class="contact-box">
+        <h3>Pizza Pie</h3>
+        <span>Connect With Us</span>
+        <div class="social">
+          <a href="#"><i
+              class="bx bxl-facebook"></i></a>
+          <a href="#"><i
+              class="bx bxl-twitter"></i></a>
+          <a href="#"><i
+              class="bx bxl-instagram"></i></a>
+        </div>
+      </div>
+      <div class="contact-box">
+        <h3>Menu Links</h3>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#services">Service</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </div>
+      <div class="contact-box">
+        <h3>Quick Links</h3>
+        <li><a href="#Contact">Contact</a></li>
+        <li><a href="#Privacy Policy">Privacy
+            Policy</a></li>
+        <li><a href="#Disclaimer">Disclaimer</a></li>
+        <li><a href="#Terms Of Use">Terms Of Use</a></li>
+      </div>
+      <div class="contact-box address">
+        <h3>Contact</h3>
+        <i class="bx bxs-map"><span>005, Lorem ipsum dolor,
+            sit amet consectetur, India</span></i>
+        <i class="bx bxs-phone"><span>+91 000 999
+            5555</span></i>
+        <i
+          class="bx bxs-envelope"><span>Example@email.com</span></i>
+      </div>
+    </section>
+
+    <!-- Copyright -->
+    <div class="copyright">
+      <p>© Asslone4 All Right Reserved.</p>
+    </div>
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Link To JavaScript -->
+    <script src="script.js"></script>
+    <script>
       // Navbar
       let menu = document.querySelector("#menu-icon");
       let navbar = document.querySelector(".navbar");
@@ -544,5 +548,6 @@
         }
       );
     </script>
-       </body>
+    <script src="/script.js"></script>
+  </body>
 </html>
