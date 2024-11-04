@@ -31,11 +31,10 @@
   margin: 10px 0;
 }
 .nav-list a {
-  text-decoration: none;
-  color: #fffefe;
-  display: block;
-  padding: 10px;
-  border-radius: 4px;
+  text-decoration: wavy;
+  color: #ffb411;
+  font-size: 1.1rem;
+
 }
 .nav-list a:hover {
   background: #8e85b87c;
@@ -294,3 +293,12 @@ tr:nth-child(even) {
 
 /* // XX-Large devices (larger desktops) */
 /* // No media query since the xxl breakpoint has no upper bound on its width */
+
+
+#scroll-bar{
+  height: 98%;
+  width:30%;
+  border:1px solid grey;
+  font-family: 'GestaRegular', Arial, Helvetica, sans-serif;
+  overflow: auto;
+}

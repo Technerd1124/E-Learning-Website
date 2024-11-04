@@ -20,21 +20,17 @@
       href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.min.css" />
     <link rel="stylesheet" href="style.css">
   </head>
-
   <body class="active">
     <!-- Navbar -->
     <header>
       <a href="#" class="logo"> Tech And Teach</a>
 
       <div class="bx bx-menu" id="menu-icon"></div>
-
       <ul class="navbar">
         <li><a href="#home">Home</a></li>
         <li><a href="#about"> Course </a></li>
         <li><a href="./FeedBack/feedback.html">FeedBack</a></li>
         <li><a href="#contact">Contact</a></li>
-        <!-- Dark Mode -->
-        <div class="bx bx-moon" id="darkmode"></div>
       </ul>
     </header>
     <!-- Home  Section-->
@@ -66,14 +62,16 @@
         <h2>
           Unlocking the Power of Databases
           Together
-
+        </h2>
+        <h2 style="color:#ffb411;">
+          Learn SQL now 
         </h2>
         <p>
           Welcome to Tech And Teach, your go-to
           platform for mastering SQL and database
           management. We believe that understanding how
           to work with data is an essential skill in
-          today’s data-driven world. Our website is
+          today's data-driven world. Our website is
           designed to make learning SQL accessible,
           practical, and impactful for students,
           aspiring data professionals, and anyone
@@ -88,29 +86,7 @@
     <!-- Feedback -->
     <section class="feedback" id="feedback">
 
-      <button onclick="show()">Show Sweet Alert</button>
-      <button onclick="showError()">Show Error Alert</button>
-      <div class="heading" style="text-align: center">Log Into Tech &
-        Teach</div>
-      <div class="formbody">
-        <form name="loginform" onsubmit="return validForm()" method="GET"
-          action="index.html" m>
-          <h3 style="text-align: center">Login Here</h3>
-          <div class="formbox">
-            <label>User Name</label>
-            <input type="text" name="username" />
-          </div>
-          <div class="formbox">
-            <label>Email</label>
-            <input type="email" name="mail" />
-          </div>
-          <div class="formbox">
-            <label>Phone Number</label>
-            <input type="tel" name="phoneno" />
-          </div>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
+     
     </section>
 
     <!-- Connect -->
@@ -183,21 +159,8 @@
       window.onscroll = () => {
         navbar.classList.remove("active");
       };
-      // Dark Mode
-      let darkmode = document.querySelector("#darkmode");
+    
 
-      // Set initial state for dark mode icon to sun
-      darkmode.classList.replace("bx-moon", "bx-sun");
-
-      darkmode.onclick = () => {
-        if (darkmode.classList.contains("bx-moon")) {
-          darkmode.classList.replace("bx-moon", "bx-sun");
-          document.body.classList.add("active");
-        } else {
-          darkmode.classList.replace("bx-sun", "bx-moon");
-          document.body.classList.remove("active");
-        }
-      };
 
       // Scroll Reveal
       const sr = ScrollReveal({

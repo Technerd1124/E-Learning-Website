@@ -1,3 +1,31 @@
+
+
+
+// function validateForm() {
+
+//   with(document.forms[0]){
+//     var name = name.value;
+//     var email = email.value;
+//     var message = message.value;
+//   }
+//   if(name== "" && name.length > 20){
+//     alert("  Invalide name feild  ( Name should be between 1-20 charcter");
+//     return false;
+//   }
+
+//   var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//   var validmail =emailRegex.test(email)
+//  if(email =="" && validmail) {
+//   alert("Invalid email address");
+//   return false;
+//  }
+//  if(message.length > 50){
+//   alert("Message should be less than 50 characters");
+//   return false;
+//  }
+ 
+// }
+
 function sendMail() {
     var params = {
       name: document.getElementById("name").value,
@@ -17,7 +45,6 @@ function sendMail() {
           alert("Your message sent successfully!!")
   
       })
-      .catch(err=>console.log(err));
-  
+      .catch(err=>console.log(err) ,alert(" cannot send Feedback"));
   }
   
