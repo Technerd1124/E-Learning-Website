@@ -20,8 +20,8 @@
 }
 
 .sidebar li {
-  background-color: #5c5470;
-  border-radius: 6vh;
+
+  background-color: #5c547017;
 }
 .nav-list {
   list-style: none;
@@ -297,7 +297,7 @@ tr:nth-child(even) {
 
 #scroll-bar{
   height: 98%;
-  width:30%;
+  width:16%;
   border:1px solid grey;
   font-family: 'GestaRegular', Arial, Helvetica, sans-serif;
   overflow: auto;
