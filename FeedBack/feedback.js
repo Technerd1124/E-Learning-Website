@@ -25,30 +25,44 @@
 //  }
  
 // }
+function setCookies(name, email, message) {
+  const expiryDate = new Date();
+  expiryDate.setDate(expiryDate.getDate() + 7); // Set cookie to expire in 7 days
 
+  document.cookie = `name=${encodeURIComponent(name)}; expires=${expiryDate.toUTCString()}; path=/`;
+  document.cookie = `email=${encodeURIComponent(email)}; expires=${expiryDate.toUTCString()}; path=/`;
+  document.cookie = `message=${encodeURIComponent(message)}; expires=${expiryDate.toUTCString()}; path=/`;
+}
 function sendMail() {
-  var fun = sendMail();
-    var params = {
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      message: document.getElementById("message").value,
-    };
-  
-    const serviceID = "service_akryqys";
-    const templateID = "template_oiwwll5";
-  
-      emailjs.send(serviceID, templateID, params)
-      .then(res=>{
-          document.getElementById("name").value = "";
-          document.getElementById("email").value = "";
-          document.getElementById("message").value = "";
-          console.log(res);
-          alert("Your message sent successfully!!")
+  // Get input values
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
 
-          setTimeout(fun);
-  
-      })
-      .catch(err=>console.log(err));
-      
+  // Check if all fields are empty
+  if (name === "" && email === "" && message === "" ) {
+    alert("Error: All fields are empty. Please fill out at least one field.");
+    return; // Stop execution if all fields are empty
   }
-  
+ // Set cookies with the input values
+ setCookies(name, email, message);
+  var params = {
+    name: name,
+    email: email,
+    message: message,
+  };
+
+  const serviceID = "service_akryqys";
+  const templateID = "template_oiwwll5";
+
+  emailjs.send(serviceID, templateID, params)
+    .then(res => {
+      // Clear the input fields after sending the email
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+      console.log(res);
+      alert("Your message was sent successfully!");
+    })
+    .catch(err => console.log(err));
+}
