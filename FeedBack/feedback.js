@@ -27,6 +27,7 @@
 // }
 
 function sendMail() {
+  var fun = sendMail();
     var params = {
       name: document.getElementById("name").value,
       email: document.getElementById("email").value,
@@ -43,8 +44,11 @@ function sendMail() {
           document.getElementById("message").value = "";
           console.log(res);
           alert("Your message sent successfully!!")
+
+          setTimeout(fun);
   
       })
-      .catch(err=>console.log(err) ,alert(" cannot send Feedback"));
+      .catch(err=>console.log(err));
+      
   }
   
