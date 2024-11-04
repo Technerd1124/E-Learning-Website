@@ -1,16 +1,23 @@
 function sendMail() {
-    var perms = {
-        name: document.getElementById("username").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("feedback").value
+    var params = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("message").value,
     };
-
-    emailjs.send("service_23wzqfb", "template_spsoxnd", perms)
-        .then(function(response) {
-            alert("Email Sent!");
-            console.log("Email sent successfully", response.status, response.text);
-        }, function(error) {
-            alert("Failed to send email.");
-            console.error("Failed to send email", error);
-        });
-}
+  
+    const serviceID = "service_akryqys";
+    const templateID = "template_oiwwll5";
+  
+      emailjs.send(serviceID, templateID, params)
+      .then(res=>{
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("message").value = "";
+          console.log(res);
+          alert("Your message sent successfully!!")
+  
+      })
+      .catch(err=>console.log(err));
+  
+  }
+  
