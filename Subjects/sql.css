@@ -37,8 +37,9 @@
 
 }
 .nav-list a:hover {
-  background: #8e85b87c;
-  border-radius: 6vh;
+  background: #8e85b826;
+  text-decoration: underline;
+  padding: 0.6vh
 }
 .content-container {
   flex: 1;
@@ -232,7 +233,6 @@ tr:nth-child(even) {
     list-style: disclosure-closed;
   }
 }
-/* // Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) and  (max-width: 600px) {
   .sidebar {
     width: 19%;
@@ -279,20 +279,7 @@ tr:nth-child(even) {
   }
 }
 
-/* // Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) {
-}
 
-/* // Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) {
-}
-
-/* // X-Large devices (large desktops, less than 1400px) */
-@media (max-width: 1399.98px) {
-}
-
-/* // XX-Large devices (larger desktops) */
-/* // No media query since the xxl breakpoint has no upper bound on its width */
 
 
 #scroll-bar{
