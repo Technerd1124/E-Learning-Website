@@ -14,14 +14,22 @@
         background: var(--main-color);
         color: #fff;
       }
+
       :root {
         --main-color: #ffb411;
         --text-color: #1e1c2a;
         --bg-color: #fff;
-
         --big-font: 4rem;
         --h2-font: 2.24rem;
         --p-font: 0.9rem;
+      }
+
+      .Auto{
+        font-size: x-large;
+        font-weight: 600;
+        color: #ffb411;
+        font-family: monospace;
+
       }
       section {
         padding: 50px 10%;
@@ -34,10 +42,11 @@
         color: var(--text-color);
         background: var(--bg-color);
       }
-      #darkmode {
-        font-size: 25px;
-        cursor: pointer;
-      }
+    #autotype
+    {
+      /* color: red; */
+      font-size:2.1rem;
+    }
       header {
         position: fixed;
         width: 100%;
@@ -83,10 +92,11 @@
       }
       .home-img img {
         width: 100%;
+        border: 2px solid white;
       }
       .home-text h1 {
         font-size: var(--big-font);
-        color: var(--main-color);
+        color: #fff;
       }
       .home-text h2 {
         font-size: var(--h2-font);
@@ -252,6 +262,8 @@
         padding: 20px;
         text-align: center;
       }
+
+        /* ------- Responsive Style --------- */
       @media (max-width: 921px) {
         header {
           padding: 14px 41px;

@@ -7,6 +7,8 @@ function show() {
   });
 }
 
+
+
 function showError() {
   Swal.fire({
     position: "center",
@@ -79,13 +81,13 @@ function setCookie() {
 
   document.cookie = `UserName=${
     form.username.value
-  }; expires=${date.toUTCString()}; path=/`;
+  }; expires=${date.toUTCString()};`;
   document.cookie = `MailID=${
     form.mail.value
-  }; expires=${date.toUTCString()}; path=/`;
+  }; expires=${date.toUTCString()}; `;
   document.cookie = `PhoneNumber=${
     form.phoneno.value
-  }; expires=${date.toUTCString()}; path=/`;
+  }; expires=${date.toUTCString()}; `;
 
   Swal.fire({
     position: "center",

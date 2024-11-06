@@ -6,6 +6,7 @@
   background: #dbd8e3;
 }
 .sidebar {
+  
   width: 15%;
   height: 200%;
   background: #f4f4f4;
@@ -175,6 +176,14 @@ tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
+#scroll-bar{
+  height: 91%;
+  width:16%;
+  border:1px solid grey;
+  font-family: 'GestaRegular', Arial, Helvetica, sans-serif;
+  overflow: auto;
+}
+
 /* === Footer CSS From Index =======  */
 .footerClass {
   border: 2px solid red;
@@ -184,108 +193,13 @@ tr:nth-child(even) {
   flex-direction: row;
 }
 
-/* =====  = Example == */
+
+
 
 /* // X-Small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
-  .sidebar {
-    width: 21%;
-    height: 200%;
-    background: #f4f4f4;
-    background-color: #2a2438;
-    padding: 10px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    font-size: 0.9rem;
-  }
 
-  .sidebar h2 {
-    margin-top: 0;
-    color: #fff;
-    font-size: 1.1rem;
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
   }
-  .sidebar li {
-    background-color: #5c5470;
-    border-radius: 1vh;
-    padding: 0;
-    font-size: 4vh;
-  }
-  .heading {
-    color: #fff;
-    font-size: 1.6rem;
-    font-weight: 700;
-    background: #2a2438;
-    padding: 2vh;
-    border-radius: 2vh;
-  }
-  .homecontent {
-    width: 96%;
-    border: 2px solid rgba(31, 21, 9, 0);
-    color: black;
-    font-size: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 1.3rem;
-    padding: 8vh;
-    background: #dbd8e3;
-  }
-  .listclass ul > li {
-    font-size: 15px;
-    list-style: disclosure-closed;
-  }
-}
-@media (max-width: 767.98px) and  (max-width: 600px) {
-  .sidebar {
-    width: 19%;
-    height: 200%;
-    background: #f4f4f4;
-    background-color: #2a2438;
-    padding: 1px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    font-size: 5vh;
-  }
-  .sidebar h2 {
-    margin-top: 0;
-    color: #fff;
-    text-align: center;
-  }
-  .listclass ul > li {
-    font-size: 13px;
-    list-style: disclosure-closed;
-  }
-  .heading {
-    color: #fff;
-    font-size: 1.3rem;
-    font-weight: 700;
-    background: #2a2438;
-    padding: 3vh;
-    border-radius: 2vh;
-  }
-  .subheading {
-    position: relative;
-    padding: 12px;
-    font-size: 23px;
-  }
-  .listclass ul > li {
-    font-size: 21px;
-    list-style: disclosure-closed;
-  }
-  .contentBox {
-    position: relative;
-    top: 3vh;
-    font-size: 19px;
-    padding: 7vh;
-    border: 2px solid rgba(216, 112, 147, 0.082);
-    letter-spacing: 1px;
-  }
-}
-
-
-
-
-#scroll-bar{
-  height: 98%;
-  width:16%;
-  border:1px solid grey;
-  font-family: 'GestaRegular', Arial, Helvetica, sans-serif;
-  overflow: auto;
 }

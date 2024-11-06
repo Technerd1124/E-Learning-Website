@@ -7,11 +7,12 @@
       content="width=device-width, initial-scale=1.0" />
     <title>Tech and Teach</title>
     <!-- Box Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
     <link
       rel="stylesheet"
       href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
     <!-- Link To CSS -->
-    <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="/login.css">
     <script
       src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.all.min.js"></script>
@@ -28,20 +29,18 @@
       <div class="bx bx-menu" id="menu-icon"></div>
       <ul class="navbar">
         <li><a href="#home">Home</a></li>
-        <li><a href="#about"> Course </a></li>
+        <li><a href="#Course"> Course </a></li>
         <li><a href="./FeedBack/feedback.html">FeedBack</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </header>
     <!-- Home  Section-->
     <section class="home" id="home">
+      
       <div class="home-text">
         <h1>Learn For Free</h1>
         <div class="text-overlay">
-          <span id="autotype">
-            Unlock Your Potential with Free Courses
-            Anytime, Anywhere!
-          </span>
+          <span class="Auto"> </span>
         </div>
       </div>
       <div class="home-img">
@@ -51,7 +50,7 @@
     </section>
 
     <!-- About -->
-    <section class="about" id="about">
+    <section class="about" id="Course">
       <div class="about-img">
         <img
           src="/Demo UI/logo.svg"
@@ -82,13 +81,7 @@
     </section>
 
 
-
-    <!-- Feedback -->
-    <section class="feedback" id="feedback">
-
-     
-    </section>
-
+  
     <!-- Connect -->
     <section class="connect">
       <div class="connect-text">
@@ -112,7 +105,7 @@
       <div class="contact-box">
           <h3>Menu Links</h3>
           <li><a href="#home">Home</a></li>
-          <li><a href="#course">Course</a></li>
+          <li><a href="#Course">Course</a></li>
           <li><a href="/FeedBack/feedback.html">feedback</a></li>
           <li><a href="#contact">Contact</a></li>
       </div>
@@ -138,61 +131,7 @@
 
     <!-- Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <!-- Link To JavaScript -->
-    <script src="script.js"></script>
-    <script>
-      // Navbar
-      let menu = document.querySelector("#menu-icon");
-      let navbar = document.querySelector(".navbar");
-
-      menu.onclick = () => {
-        navbar.classList.toggle("active");
-      };
-
-      window.onscroll = () => {
-        navbar.classList.remove("active");
-      };
-    
-
-
-      // Scroll Reveal
-      const sr = ScrollReveal({
-        origin: "top",
-        distance: "40px",
-        duration: 2000,
-        reset: true,
-      });
-
-      sr.reveal(
-        `.home-text, .home-img,
-            .about-img, .about-text,
-            .box, .s-box,
-            .btn, .connect-text,
-            .contact-box`,
-        {
-          interval: 200,
-        }
-      );
-
-
-      var typed = new Typed('#autotype', {
-        strings: ['Learn for Free: Empower Your Knowledge and Skills! ', 'Advance Your Career with 100% Free Learning Resources'],
-        typeSpeed:130,
-        backSpeed: 30,
-        loop:true
-      }
-    );
-    
-     // setInterval( Typed(), 200);
-    
-     function toggleMenu() {
-      const navLinks = document.getElementById("navLinks");
-      navLinks.classList.toggle("active");
-    }
-    
-    
-    </script>
-    <script src="/script.js"></script>
+    <script src="/script.js" defer>  </script>
 
   </body>
 </html>
