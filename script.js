@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 
-    
-=======
    // Navbar
->>>>>>> c95a96954e6d697cb42898019d6d4ed80e678609
    let menu = document.querySelector("#menu-icon");
    let navbar = document.querySelector(".navbar");
 
@@ -37,28 +33,18 @@
    );
 
 
-<<<<<<< HEAD
-=======
-   var typed = new Typed('#autotype', {
-     strings: ['Learn for Free: Empower Your Knowledge and Skills! ', 'Advance Your Career with 100% Free Learning Resources'],
-     typeSpeed:130,
-     backSpeed: 30,
-     loop:true
-   }
- );
- 
+
   // setInterval( Typed(), 200);
->>>>>>> c95a96954e6d697cb42898019d6d4ed80e678609
+ 
  
   function toggleMenu() {
    const navLinks = document.getElementById("navLinks");
    navLinks.classList.toggle("active");
-<<<<<<< HEAD
  }
 
 
- const span = document.querySelector('span')
 
+const span = document.querySelector('span')
 const wordsList = ['Learn' ,"Grow","Empower","Succeed"]
 
 function autoType(wordsList, element, time) {
@@ -100,6 +86,3 @@ function autoType(wordsList, element, time) {
 
 autoType(wordsList, span)
 // autoType(wordsList, span2)
-=======
- }
->>>>>>> c95a96954e6d697cb42898019d6d4ed80e678609
