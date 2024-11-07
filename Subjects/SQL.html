@@ -22,7 +22,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body oncontextmenu="Block_Click(event)">
 
 <br>
 <br>
@@ -34,7 +34,7 @@
       <div class="sidebar" id="scroll-bar">
         <h2>SQL Tutorial</h2>
         <ul class="nav-list" id="navLinks">
-<<<<<<< HEAD
+
           <li><a href="#home" data-target="home" class="active">SQL Home</a></li>
           <li><a href="#intro" data-target="intro">SQL Intro</a></li>
           <li><a href="#syntax" data-target="syntax">SQL Syntax</a></li>
@@ -57,30 +57,7 @@
           <li style="color: rgb(255, 255, 255); background-color: rgba(137, 43, 226, 0.158);"><a
               onclick="openFeedback()"> Give us Feedback 🙌 </a></li>
         </ul>
-=======
-        <li><a href="#home"  data-target="home"class="active">SQL Home</a></li>
-        <li><a href="#intro" data-target="intro">SQL Intro</a></li>
-        <li><a href="#syntax" data-target="syntax">SQL Syntax</a></li>
-        <li><a href="#select" data-target="select">SQL Select</a></li>
-        <li><a href="#distinct" data-target="distinct">SQL Select Distinct</a></li>
-        <li><a href="#where" data-target="where">SQL Where</a></li>
-        <li><a href="#orderby" data-target="orderby">SQL Order By</a></li>
-        <li><a href="#and" data-target="and">SQL And</a></li>
-        <li><a href="#or" data-target="or">SQL Or</a></li>
-        <li><a href="#insert" data-target="insert">SQL Insert Into</a></li>
-        <li><a href="#null" data-target="null">SQL Null Values</a></li>
-        <li><a href="#aggregate" data-target="aggregate">SQL aggregate Functions  </a></li>
-        <li><a href="#groupby" data-target="groupby">SQL Group By</a></li>
-        <li><a href="#having" data-target="having">SQL Having</a></li>
-        <li><a href="#join" data-target="join">SQL Joins</a></li>
-        <li><a href="#functions" data-target="functions">SQL Functions</a></li>
-        <li><a href="#indexes" data-target="indexes">SQL Indexes</a></li>
-        <li><a href="#constraints" data-target="constraints">SQL Constraints</a></li>
-        <li><a href="#transactions" data-target="transactions">SQL Transactions</a></li>
-        <li style="color: rgb(255, 255, 255); background-color: rgba(137, 43, 226, 0.158);"><a  onclick="openFeedback()"> Give us Feedback 🙌 </a></li>
-      </ul>
->>>>>>> c95a96954e6d697cb42898019d6d4ed80e678609
-
+    
       </div>
 
       <div class="content-container">
@@ -1911,35 +1888,9 @@
       </div>
       <!-- End content-container -->
     </div>
-    <!-- --- Footer Navigator --- -->
 
-    <footer>
+  
+    <script src="./sql.js"></script>
 
-    </footer>
-    <script>
-      document.querySelectorAll(".nav-list a").forEach((link) => {
-        link.addEventListener("click", (e) => {
-          e.preventDefault(); // Prevent the default anchor behavior
-          const targetId = link.getAttribute("data-target");
-          // Hide all content sections
-          document.querySelectorAll(".content").forEach((content) => {
-            content.classList.remove("active");
-          });
-          // Show the targeted content section
-          document.getElementById(targetId).classList.add("active");
-          // Remove 'active' class from all links
-          document.querySelectorAll(".nav-list a").forEach((a) => {
-            a.classList.remove("active");
-          });
-          // Add 'active' class to the clicked link
-          link.classList.add("active");
-        });
-      });
-
-
-      function openFeedback() {
-        window.open("/FeedBack/feedback.html", "_self")
-      }
-    </script>
   </body>
 </html>
