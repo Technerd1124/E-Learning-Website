@@ -1,51 +1,52 @@
-
 function setCookies(name, email, message) {
   const expiryDate = new Date();
   expiryDate.setDate(expiryDate.getDate() + 7); // Set cookie to expire in 7 days
-  document.cookie = `name=${name}; expires=${expiryDate.toUTCString()}; `;
-  document.cookie = `email=${email}; expires=${expiryDate.toUTCString()};`;
-  document.cookie = `message=${message}; expires=${expiryDate.toUTCString()};`;
+  document.cookie = `name=${encodeURIComponent(name)}; expires=${expiryDate.toUTCString()}; path=/`;
+  document.cookie = `email=${encodeURIComponent(email)}; expires=${expiryDate.toUTCString()}; path=/`;
+  document.cookie = `message=${encodeURIComponent(message)}; expires=${expiryDate.toUTCString()}; path=/`;
 }
-
 
 function validateForm() {
-  with(document.forms[0]){
-    var name = name.value;
-    var email = email.value;
-    var message = message.value;
-  }
-  if(name== "" && name.length < 1){
-    alert("  Invalide name feild  ( Name should be between 1-20 charcter");
+  const form = document.forms[0];
+  const name = form.name.value;
+  const email = form.email.value;
+  const message = form.message.value;
+
+  if (name === "" || name.length < 1 || name.length > 20) {
+    alert("Invalid name field. Name should be between 1-20 characters.");
     return false;
   }
-  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  var validmail =emailRegex.test(email)
- if(email =="" && !validmail) {
-  alert("Invalid email address");
-  return false;
- }
 
- if(message.length > 1 && message.length < 50){
-  alert("Message should be less than 50 characters and MOre than 1 Character ");
-  return false;
- }
-
- return true;
-
-}
-function sendMail() {
-  // Get input values
-  var name = document.getElementById("name").value;
-  var email = document.getElementById("email").value;
-  var message = document.getElementById("message").value;
-
-  if( !validateForm()){
-    alert(" Incorrect Data Fields ")
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (email === "" || !emailRegex.test(email)) {
+    alert("Invalid email address");
+    return false;
   }
-  
- // Set cookies with the input values
- setCookies(name, email, message);
-  var params = {
+
+  if (message.length < 1 || message.length > 50) {
+    alert("Message should be between 1 and 50 characters.");
+    return false;
+  }
+
+  return true;
+}
+
+function sendMail() {
+  // Validate form data before proceeding
+  if (!validateForm()) {
+    alert("Incorrect data fields");
+    return;
+  }
+
+  // Get input values
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  // Set cookies with the input values
+  setCookies(name, email, message);
+
+  const params = {
     name: name,
     email: email,
     message: message,
@@ -63,6 +64,5 @@ function sendMail() {
       console.log(res);
       alert("Your message was sent successfully!");
     })
-    .catch(err => console.log(err));
+    .catch(err => console.log("Failed to send email:", err));
 }
-
