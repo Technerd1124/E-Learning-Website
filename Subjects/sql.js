@@ -24,7 +24,7 @@ function openFeedback() {
 
 function Block_Click(event) {
   if (event.button == 2) {
-    event.preventDefault(); // Prevent the default right-click behavior
+    event.preventDefault();  // Prevent the default right-click behavior
     alert("Right click disabled!");
     return false;
   }

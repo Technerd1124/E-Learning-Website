@@ -2,9 +2,9 @@
 function setCookies(name, email, message) {
   const expiryDate = new Date();
   expiryDate.setDate(expiryDate.getDate() + 7); // Set cookie to expire in 7 days
-  document.cookie = `name=${encodeURIComponent(name)}; expires=${expiryDate.toUTCString()}; `;
-  document.cookie = `email=${encodeURIComponent(email)}; expires=${expiryDate.toUTCString()};`;
-  document.cookie = `message=${encodeURIComponent(message)}; expires=${expiryDate.toUTCString()};`;
+  document.cookie = `name=${name}; expires=${expiryDate.toUTCString()}; `;
+  document.cookie = `email=${email}; expires=${expiryDate.toUTCString()};`;
+  document.cookie = `message=${message}; expires=${expiryDate.toUTCString()};`;
 }
 
 
