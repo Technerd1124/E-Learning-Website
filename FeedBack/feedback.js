@@ -33,10 +33,10 @@ function validateForm() {
 
 function sendMail() {
   // Validate form data before proceeding
-  if (!validateForm()) {
-    alert("Incorrect data fields");
-    return;
-  }
+  // if (!validateForm()) {
+  //   alert("Incorrect data fields");
+  //   return;
+  // }
 
   // Get input values
   const name = document.getElementById("name").value;
@@ -58,10 +58,10 @@ function sendMail() {
   emailjs.send(serviceID, templateID, params)
     .then(res => {
       // Clear the input fields after sending the email
-      alert("Your message was sent successfully!");
       document.getElementById("name").value = "";
       document.getElementById("email").value = "";
       document.getElementById("message").value = "";
+      alert("Your message was sent successfully!");
       console.log(res);
     })
     .catch(err => console.log("Failed to send email:", err));

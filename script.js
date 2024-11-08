@@ -10,7 +10,7 @@ window.onscroll = () => {
   navbar.classList.remove("active");
 };
 
-// Scroll Reveal
+// Scroll Reveal  
 const sr = ScrollReveal({
   origin: "top",
   distance: "40px",
@@ -29,7 +29,6 @@ sr.reveal(
   }
 );
 
-// setInterval( Typed(), 200);
 
 function toggleMenu() {
   const navLinks = document.getElementById("navLinks");
@@ -113,6 +112,7 @@ function OpenContact() {
   x = x.replace("&", "@");
   x = x.replace("*", ".");
   x = x.replace(/_/g, ""); // "TeachAndteach@gmail.com"
+  var b = y+z+x+s;
   var gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${x}&su=${encodeURIComponent(s)}`;
 
   window.location =gmailLink;
